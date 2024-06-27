@@ -1,0 +1,517 @@
+---
+title: "Citation Data"
+editor: visual
+execute:
+  echo: false
+  cache: true
+  warning: false
+format:
+  html:
+    fig-format: svg
+    fig-height: 10
+    fig-width: 10
+---
+
+```{r}
+#| label: loader
+#| cache: false
+require(tidyverse)
+require(slider)
+require(stringr)
+require(knitr)
+```
+
+```{r}
+#| label: setup
+
+load("philo_bib.RData")
+load("philo_cite.RData")
+
+authadjust <- function(x){
+  paste0(str_extract(x, '\\b[^,]+$'), " ", str_to_title(str_extract(x,".+(?=,)")))
+}
+
+
+article_years <- philo_bib |>
+  as_tibble() |>
+  select(id, year)
+
+article_title <- philo_bib |>
+  as_tibble() |>
+  select(id, author, art_title, journal) 
+
+citation_tibble <- philo_cite |>
+  as_tibble() |>
+  rename(new = id, old = refs) |>
+  left_join(article_years, by = c("old" = "id")) |>
+  rename(old_year = year)  |>
+  left_join(article_years, by = c("new" = "id")) |>
+  rename(new_year = year)
+
+main_article_ids <- c()
+
+for(year in (1976:2015)){
+  
+  topper <- 1
+  all_cited <- tribble(~old, ~n)
+  
+  while(nrow(all_cited) < 9){
+    
+    
+    most_cited <- citation_tibble |>
+      filter(old_year == year) |>
+      group_by(old) |>
+      tally() |>
+      ungroup() |>
+      slice_max(n, n=topper)
+    
+    recent_cited <- citation_tibble |>
+      filter(old_year == year, new_year >= 2013) |>
+      group_by(old) |>
+      tally() |>
+      ungroup() |>
+      slice_max(n, n=topper)
+    
+    orig_cited <- citation_tibble |>
+      filter(old_year == year, new_year <= year + 10) |>
+      group_by(old) |>
+      tally() |>
+      ungroup() |>
+      slice_max(n, n=topper)
+    
+    all_cited <- bind_rows(most_cited, recent_cited, orig_cited) |>
+      distinct(old, .keep_all = TRUE) |>
+      mutate(old_year = year)
+    
+    topper <- topper + 1
+  }
+  main_article_ids <- bind_rows(
+    main_article_ids,
+    slice_max(all_cited, n, n=9, with_ties = FALSE)
+  )
+}
+
+main_bib <- main_article_ids |>
+  left_join(article_title, by = c("old" = "id")) |>
+  ungroup() |>
+  rowwise() |>
+  mutate(graph_auth =  case_when(author[1] == "Pohlhaus, Gaile, Jr." ~ "Gaile Pohlhaus Jr.",
+                                 length(author) == 1 ~ authadjust(author[1]),
+                                 length(author) == 2 ~ paste0(authadjust(author[1]), " and ", authadjust(author[2])),
+                                 TRUE ~ paste0(authadjust(author[1]), ", et al"))) |>
+  mutate(graph_auth = str_replace_all(
+    graph_auth,
+    c(
+      'Bonjour' = 'BonJour',
+      'Mcdowell' = 'McDowell',
+      'Mcmullin' = 'McMullin',
+      'Mcgee' = 'McGee',
+      'Mcginn' = 'McGinn',
+      'Mcgrath' = 'McGrath',
+      'Mckinsey' = 'McKinsey',
+      'Macfarlane' = 'MacFarlane',
+      'Castaneda' = 'Castañeda',
+      'Hajek' = 'Hájek',
+      'Vaninwagen' = 'van Inwagen',
+      'Inwagen' = 'van Inwagen',
+      'Vanfraassen' = 'van Fraassen',
+      'D\'arms' = 'D\'Arms',
+      'Godfreysmith' = 'Godfrey-Smith',
+      'Vangelder' = 'van Gelder',
+      'Derosset' = 'deRosset'
+    )
+  )) |>
+  mutate(graph_cite = paste0(
+    graph_auth,
+    ", \"",
+    art_title,
+    "\""
+  )) |>
+  mutate(journal = str_replace_all(journal, 'Nous', 'Noûs')) |>
+  mutate(graph_cite = str_replace_all(
+    graph_cite,
+    c(
+      ' A ' = ' a ',
+      ' And ' = ' and ',
+      ' The ' = ' the ',
+      ' Or ' = ' or ',
+      ' As ' = ' as ',
+      ' Of ' = ' of ',
+      ' On ' = ' on ',
+      ' In ' = ' in ',
+      ' For ' = ' for ',
+      ' Is ' = ' is ',
+      'Decision-Theory' = 'Decision Theory',
+      'Modern-History' = 'Modern History',
+      'Times Arrow' = 'Time\'s Arrow',
+      'Derosset' = 'deRosset',
+      'Macfarlane' = 'MacFarlane',
+      'Norms Of Assertion (Knowledge Norm Of Assertion, Kna)' = 'Norms of Assertion',
+      'Derose' = 'DeRose',
+      'Mcgrath' = 'McGrath',
+      'Trust? (Epistemic Considerations)' = 'Trust?',
+      'D\'arms' = 'D\'Arms',
+      'Dimensionalism (Persistence Through Time, Doctrine Of Temporal Parts, Perdurance)' = 'Dimensionalism',
+      'Frankfurt Attack on the Principle-Of-Alternative-Possibilities' = 'Frankfurt\'s Attack on the Principle of Alternative Possibilities',
+      'Chance And Credence - Humean Supervenience Debugged' = 'Humean Supervenience Debugged',
+      'Mckinsey' = 'McKinsey',
+      '2 Modelings ' = 'Two Modelings ',
+      'Moral Realism + A Form Of Ethical Naturalism' = 'Moral Realism',
+      'Actualism + The Exploration And Defense Of Actualism' = 'Actualism',
+      'Mcgee' = 'McGee',
+      'Vanfraassen' = 'van Fraassen',
+      'Putnam Paradox' = 'Putnam\'s Paradox',
+      '2 Distinctions' = 'Two Distinctions',
+      '3 Theses' = 'Three Theses',
+      '2 Notions' = 'Two Notions',
+      'Godfreysmith' = 'Godfrey-Smith',
+      '2 Concepts' = 'Two Concepts',
+      '2 Kinds' = 'Two Kinds',
+      '2 Types' = 'Two Types',
+      'Mcdowell' = 'McDowell',
+      '1st' = 'First',
+      'G.e. Moore' = 'G.E. Moore',
+      'To-Be' = 'To Be',
+      'De-Dicto' = 'De Dicto',
+      'De-Se' = 'De Se',
+      'Problem of Action' = 'The Problem of Action',
+      'Matter of Individuality' = 'A Matter of Individuality',
+      'Logic of Paradox' = 'The Logic of Paradox',
+      'Problem of the Essential' = 'The Problem of the Essential',
+      'and a Ariew' = 'and A Ariew'
+    )
+  )) |>
+  mutate(graph_cite = str_replace_all(
+        graph_cite,
+        fixed(
+          c(
+            'Have a Foundation' = 'Have a Foundation?',
+            'Materialism and Qualia, the Explanatory Gap' = 'Materialism and Qualia: The Explanatory Gap',
+            'Saints + Implications for Moral-Philosophy' = 'Saints',
+            'All the Worlds a Stage + a Philosophers Reasons To Believe the Stage-View' = 'All the World\'s a Stage',
+            'Stalking the Wild Epistemic Engine + Computational Psychology and Cognition' = 'Stalking The Wild Epistemic Engine',
+            'Structures of Normative Theories + Addressing the Agent-Neutral and Agent-Centered Distinctions as Substantive Mistakes in Moral Theorizing' = 'Structures of Normative Theories',
+            'Moral Realism + a Form of Ethical Naturalism' = 'Moral Realism',
+            'Oughts, Options, and Actualism + the Exploration and Defense of Actualism' = 'Oughts, Options, and Actualism',
+            'Sense, Nonsense and the Senses, An Inquiry Into the Powers of the Human Mind + 1994 Dewey Lectures At Columbia-University, Lecture 1 - the Antinomy of Reason' = 'Sense, Nonsense, and the Senses: An Inquiry into the Powers of the Human Mind',
+            'Finkish Dispositions + Refutation of Simple Conditional Analysis' = 'Finkish Dispositions',
+            'Four-Dimensionalism (Persistence Through Time, Doctrine of Temporal Parts, Perdurance)' = 'Four-Dimensionalism',
+            'The Extended Mind (Active Externalism)' = 'The Extended Mind',
+            'Brutal Composition (Objects, Vagueness, Ontology)' = 'Brutal Composition',
+            'Consciousness The Transmutation Of A Concept' = 'Consciousness: The Transmutation Of A Concept',
+            'Dispositions and Antidotes (Reply To David Lewis)' = 'Dispositions and Antidotes',
+            'Nonexistence (Singular Negative Existentials)' = 'Nonexistence',
+            'Is Coherence Truth Conducive? (Belief)' = 'Is Coherence Truth Conducive?',
+            'Is There A Fundamental Level? (Reality, Metaphysics, Ontology)' = 'Is There A Fundamental Level?',
+            'Emotions (Ethics, Propriety, Correctness)' = 'Emotions',
+            'Antidotes (Reply To David Lewis)' = 'Antidotes',
+            'Mind (Active Externalism)' = 'Mind',
+            'Clay (Problem in Philosophy, Ontology)' = 'Clay',
+            ' (Properties, Philosophy)' = '',
+            ' (Rationality, Correct Reasoning)' = '',
+            ' (A Philosophical Consideration on Propositional Definitions of Acquired Knowing)' = '',
+            ' (Epistemic Considerations)' = '',
+            'G.e. Moore And John Mcdowell' = 'G.E. Moore and John McDowell',
+            ' (Epistemic Warrant)' = '',
+            ' (Reality, Metaphysics, Ontology)' = '',
+            ' (Knowledge Norm of Assertion, Kna)' = '',
+            ' (Keith Lehrer)' = '',
+            'Best Explanation - Criteria for Theory Choice' = 'The Best Explanation: Criteria for Theory Choice',
+            'What is Equality .1. Equality of Welfare' = 'What is Equality? Part 1: Equality of Welfare',
+            'What is Equality .2. Equality of Resources' = 'What is Equality? Part 2: Equality of Resources',
+            'Fallacy: on' = 'Fallacy: On',
+            'Chance and Credence - Humean Supervenience Debugged' = 'Humean Supervenience Debugged',
+            'The Rule-Following Considerations .5.' = 'The Rule-Following Considerations',
+            ' - ' = ': ',
+            ': a' = ': A',
+            ': the' = ': The',
+            ': on' = ': On'
+            )
+        )
+      )
+    ) |>
+  mutate(graph_auth = str_replace_all(
+    graph_auth,
+    c(
+      'J. S.' = 'J.S.'
+    )
+  )) |>
+  mutate(spaces_in_auth = str_count(graph_auth, " ")) |>
+  rowwise() |>
+  mutate(short_auth = case_when(
+    spaces_in_auth == 6 ~ 
+      paste0(
+        str_sub(
+          graph_auth,
+          start = str_locate_all(graph_auth, " ")[[1]][2] + 1,
+          end = str_locate_all(graph_auth, " ")[[1]][3] -1 
+        ),
+        " and ",
+        str_sub(
+          graph_auth,
+          start = str_locate_all(graph_auth, " ")[[1]][6] + 1,
+          end = str_length(graph_auth)
+        )
+      ),
+    spaces_in_auth == 5 ~ 
+      paste0(
+        str_sub(
+          graph_auth,
+          start = str_locate_all(graph_auth, " ")[[1]][1] + 1,
+          end = str_locate_all(graph_auth, " ")[[1]][2] -1 
+        ),
+        " and ",
+        str_sub(
+          graph_auth,
+          start = str_locate_all(graph_auth, " ")[[1]][5] + 1,
+          end = str_length(graph_auth)
+        )
+      ),
+    spaces_in_auth == 4 ~ 
+      paste0(
+        str_sub(
+          graph_auth,
+          start = str_locate_all(graph_auth, " ")[[1]][1] + 1,
+          end = str_locate_all(graph_auth, " ")[[1]][2] -1 
+        ),
+        " and ",
+        str_sub(
+          graph_auth,
+          start = str_locate_all(graph_auth, " ")[[1]][4] + 1,
+          end = str_length(graph_auth)
+        )
+      ),
+    spaces_in_auth == 3 ~ 
+      paste0(
+        str_sub(
+          graph_auth,
+          start = str_locate_all(graph_auth, " ")[[1]][1] + 1,
+          end = str_locate_all(graph_auth, " ")[[1]][2] - 2 
+        ),
+        " et al"
+      ),
+    graph_auth == 'Gaile Pohlhaus Jr.' ~ 'Pohlhaus Jr.',
+    spaces_in_auth == 2 ~ 
+      str_sub(
+        graph_auth,
+        start = str_locate_all(graph_auth, " ")[[1]][2] + 1,
+        end = str_length(graph_auth)
+      ),
+    TRUE ~  str_sub(
+      graph_auth,
+      start = str_locate_all(graph_auth, " ")[[1]][1] + 1,
+      end = str_length(graph_auth)
+    )
+  )) |>
+  mutate(short_auth = case_when(
+    art_title == "Is Conceivability A Guide To Possibility" ~ "Yablo, Conceivability",
+    art_title == "Paradox Without Self-Reference" ~ "Yablo, Paradox",
+    art_title == "What Is Equality .2. Equality Of Resources" ~ "Dworkin Pt. 2",
+    art_title == "What Is Equality .1. Equality Of Welfare" ~ "Dworkin Pt. 1",
+    art_title == "In Defense Of Proper Functions" ~ "Millikan, Proper Function",
+    art_title == "Biosemantics" ~ "Millikan, Biosemantics",
+    art_title == "Concepts Of Supervenience" ~ "Kim, Concepts",
+    art_title == "Epiphenomenal And Supervenient Causation" ~ "Kim, Epiphenomenal",
+    art_title == "Probabilities Of Conditionals And Conditional Probabilities" ~ "Lewis, Probabilities",
+    art_title == "Paradoxes Of Time Travel" ~ "Lewis, Time Travel",
+    art_title == "Attitudes De-Dicto And De-Se" ~ "Lewis, De Se",
+    art_title == "Counterfactual Dependence And Times Arrow" ~ "Lewis, Time\'s Arrow",
+    art_title == "Scorekeeping In A Language Game" ~ "Lewis, Scorekeeping",
+    TRUE ~ short_auth
+  )) |>
+  left_join(select(philo_bib, id, longcite), by = c("old" = "id")) |>
+  rowwise() |>
+  mutate(end_of_longcite = str_sub(longcite, str_length(longcite)-35, str_length(longcite)-5)) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, "[a-z]", "")) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, "[A-Z]", "")) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, "[,.?]", "")) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, "^:", "")) |>
+  mutate(end_of_longcite = str_squish(end_of_longcite)) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, "^:", "")) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, "^\\)", "")) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, "^\\&", "")) |>
+  mutate(end_of_longcite = str_squish(end_of_longcite)) |>
+  select(end_of_longcite, everything()) |>
+  ungroup()
+
+rolling_averages <- citation_tibble |>
+  filter(old %in% main_bib$old) |>
+  group_by(old, new_year) |>
+  tally(name = "cites") |>
+  ungroup() |>
+  complete(old, new_year, fill = list(cites = 0)) |>
+  filter(new_year <= 2022) |>
+  ungroup() |>
+  group_by(old) |>
+  arrange(old, new_year) |>
+  mutate(rolling = slider::slide_dbl(cites, mean, .before = 4)) |>
+  left_join(main_bib, by = "old") |>
+  select(old, old_year, new_year, cites, rolling, graph_cite, short_auth)
+
+# List of cleanup on bibliographic information
+# - [ ] 196 (Fodor 1997) needs new journal and pages
+# - [ ] 210 (Sosa 1999) needs new journal and pages
+# - [ ] 214 (Cohen 1999) needs new journal and pages
+# - [ ] 239 (Wedgwood 2002)
+# - [ ] 254 just needs trailing dash removed
+# - [ ] 256 (Pryor 2004)
+# - [ ] 258 just needs trailing dash removed
+# - [ ] 321 Add page numbers
+# - [ ] 335 Add page numbers
+# - [ ] 338 remove trailing 1
+# - [ ] 343 remove trailing 2
+# - [ ] 356 pages
+
+main_bib <- main_bib |>
+  mutate(full_citation = paste0(graph_cite, " _", journal, "_ ", end_of_longcite,"."))
+```
+
+```{r}
+#| label: graph-code
+#| cache: false
+
+rolling_spaghetti_graph <- function(x){
+  ggplot(filter(rolling_averages, old %in% filter(
+    main_bib, old_year == x
+    )$old,
+    new_year >= x), aes(x = new_year, y = rolling, color = short_auth)) +
+    theme_minimal() +
+    geom_line() +
+    theme(legend.position="right",
+          legend.title = element_blank(),
+          legend.direction = "vertical") +
+    labs(x = element_blank(),
+         y = element_blank(),
+         title =  paste0("Widely cited articles from ", x),
+         subtitle = "Rolling five year average of citations in 100 philosophy journals") +
+    scale_x_continuous(breaks = 198:202 * 10, minor_breaks = 396:404*5) +
+    ylim(0, max(20, max(
+      filter(rolling_averages, old %in% filter(
+        main_bib, old_year == x
+      )$old,
+      new_year >= x)$rolling
+    )))
+}
+
+rolling_facet_graph <- function(x){
+  temp <- filter(rolling_averages, old_year == x, new_year >= x) |> ungroup() |> arrange(graph_cite)
+  temp$graph_cite <- factor(temp$graph_cite, levels = temp$graph_cite, labels = temp$short_auth)
+  background <- temp |> rename(backer = graph_cite)
+  ggplot(temp, aes(x = new_year, y = rolling, color = graph_cite)) +
+    theme_minimal() +
+    geom_line() +
+    geom_line(data = background, aes(x = new_year, y = rolling, group = backer), color = "grey80", alpha = 0.5) +
+    theme(legend.position="none") +
+    labs(x = element_blank(),
+         y = element_blank()) +
+    scale_x_continuous(breaks = 198:202 * 10, minor_breaks = 396:404*5) +
+    facet_wrap(vars(graph_cite)) +
+    ylim(0, max(20, max(
+      filter(rolling_averages, old %in% filter(
+        main_bib, old_year == x
+      )$old,
+      new_year >= x)$rolling
+    )))
+}
+```
+
+I recently downloaded citation data for 100 philosophy journals from Web of Science. This note presents some of the data about trends in citation patterns since 1976. My main interest here is in seeing which changes there have been in what was cited over time, but there are lots of interesting nuggets. Later I'll write a real paper actually going into what some of the data mean, but for now I'm just presenting it for public consumption.
+
+# Methodology
+
+Via the University of Michigan, I got the latest available database for Web of Science circa January 2024. I created a file of every citation where both the citing article and the cited article were from one of the 100 journals in @tbl-list-of-journals, in the years that they were indexed by Web of Science.
+
+```{r}
+#| label: tbl-list-of-journals
+#| tbl-cap: The journals included in this study
+
+require(knitr)
+temp <- philo_bib |>
+  group_by(journal) |> 
+  summarise(Articles = n(), `First Year` = min(year), `Most Recent Year` = max(year)) |>
+  rename(Journal = journal)
+kable(temp)
+```
+
+Of course the first year isn't the first year the journal started publishing; it's when Web of Science started indexing them. And the last year isn't when they ceased publishing; it's the most recent year indexed. Web of Science is very slow at adding journals, and at adding volumes. But it is, as far as I've found, pretty accurate within what it adds.
+
+One big exception to this is that it's never really understood how to handle the 'supplements' to *Noûs*, i.e., *Philosophical Perspectives* and *Philosophical Issues*. Some of these are recorded as being their own thing, some of them are recorded as special issues of *Noûs*. In the latter case, the citations often only start being tracked several years after publication, and the bibliographic information is spotty. This affects some of what we see below.
+
+Because Web of Science keeps adding journals, and journals keep getting larger, the number of articles in this study keeps going up. The only downward pressure comes from the fact that some journals haven't been indexed for 2022 or even, in some cases, 2021. @fig-number-of-articles-by-year shows how many articles each year are in the study.
+
+```{r}
+#| label: the-years
+#| output: asis
+#| fig-width: 10
+#| fig-height: 10
+```
+
+```{r}
+#| label: the-years
+#| output: asis
+#| fig-width: 10
+#| fig-height: 10
+
+for (year in 1976:2015){
+
+temp <- filter(main_bib, old_year == year) |> rename(Articles = full_citation) |> select(Articles)
+
+cat("# ", year, "\n\n", "## Widely Cited Articles \n\n ", sep="")
+
+for (i in 1:9){
+  cat(i, ". ", temp$Articles[i], "\n", sep="")
+}
+
+year_cites <- citation_tibble |>
+  filter(old_year == year) |>
+  group_by(old) |>
+  tally(name = "all") |>
+  ungroup() |> 
+  left_join (citation_tibble |>
+      filter(old_year == year, new_year >= 2013) |>
+      group_by(old) |>
+      tally(name = "late") |>
+      ungroup(),
+    by = "old") |>
+  left_join (citation_tibble |>
+               filter(old_year == year, new_year <= year + 10) |>
+               group_by(old) |>
+               tally(name = "early") |>
+               ungroup(),
+             by = "old") |>
+  mutate(early = replace_na(early, 0)) |>
+  mutate(late = replace_na(late, 0))
+
+year_cites <- year_cites |>
+  add_column(all_rank = min_rank(-year_cites$all)) |>
+  add_column(early_rank = min_rank(-year_cites$early)) |>
+  add_column(late_rank = min_rank(-year_cites$late)) |>
+  filter(old %in% main_bib$old) |>
+  left_join(main_bib, by = "old") |>
+  select(Article = short_auth, `Citations` = all, `Citation Rank` = all_rank, `Early Citations` = early, `Early Rank` = early_rank, `Late Citations` = late, `Late Rank` =late_rank) |>
+  arrange(-Citations)
+
+cat("\n\n## Citation Count")
+
+print(
+  kable(
+    select(
+      year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`
+    )
+  )
+)
+  
+cat("\n\n## Citation Rank")
+print(
+  kable(
+    select(
+      year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`
+    )
+  )
+)
+
+print(rolling_spaghetti_graph(year))
+print(rolling_facet_graph(year))
+cat("\n\n")
+}
+```
