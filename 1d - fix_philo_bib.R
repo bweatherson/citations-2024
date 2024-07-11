@@ -33,7 +33,8 @@ name_fix <- c(
   'Godfreysmith' = 'Godfrey-Smith',
   'Vangelder' = 'van Gelder',
   'Derosset' = 'deRosset',
-  'Mccloskey' = 'McCloskey'
+  'Mccloskey' = 'McCloskey',
+  'Derose' = 'DeRose'
 )
 
 philo_bib_fix_2 <- philo_bib_fix_1 |>
@@ -167,8 +168,8 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
         'Chance and Credence - Humean Supervenience Debugged' = 'Humean Supervenience Debugged',
         'The Rule-Following Considerations .5.' = 'The Rule-Following Considerations',
         'Aesthetic Attitude .5.' = 'Aesthetic Attitude',
-        'A Causal Calculus .1.' = 'A Causal Calculus Part 1',
-        'A Causal Calculus (Ii)' = 'A Causal Calculus Part 2',
+        'A Causal Calculus .1.' = 'A Causal Calculus (I)',
+        'A Causal Calculus (Ii)' = 'A Causal Calculus (II)',
         'Why Did Einsteins Programme Supersede Lorentzs .1.' = 'Why Did Einsteins Programme Supersede Lorentz\'s (1)',
         'Modern Moral-Philosophy' = 'Modern Moral Philosophy',
         'Thank Goodness Thats Over' = 'Thank Goodness That\'s Over',
@@ -178,27 +179,46 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
         'Godel' = 'Gödel',
         'About .1.' = 'About',
         'Aint' = 'Ain\'t',
-        'Cogito, Ergo Sum: Inference or Performance' = 'Cogito, Ergo Sum: Inference or Performance?',
+        'Inference or Performance' = 'Inference or Performance?',
         'Can the Will Be Caused' = 'Can the Will Be Caused?',
         'Is Introspective Knowledge Incorrigible' = 'Is Introspective Knowledge Incorrigible?',
         'Kants Ethics' = 'Kant\'s Ethics',
-        'The Effect of Essentialism on Taxonomy: 2000 Years of Stasis .1.' = 'The Effect of Essentialism on Taxonomy—2000 Years of Stasis (1)',
+        'The Effect of Essentialism on Taxonomy - 2000 Years of Stasis .1.' = 'The Effect of Essentialism on Taxonomy—2000 Years of Stasis (1)',
         'Argument for Identity Theory' = 'An Argument for the Identity Theory',
         'Rigorous Proof of Determinism Derived From Special Theory of Relativity' = 'A Rigorous Proof of Determinism Derived from the Special Theory of Relativity',
         'Utterers Meaning' = 'Utterer\'s Meaning',
         'Logic of Inexact Concepts' = 'The Logic of Inexact Concepts',
         'Reasons for Indeterminacy of Translation' = 'On the Reasons for Indeterminacy of Translation',
         'Defense of Abortion' = 'A Defense of Abortion',
-        'Semantics of Entailment .2.' = 'The Semantics of Entailment: II',
+        'Semantics of Entailment .2.' = 'The Semantics of Entailment — II',
         'Liar Paradox' = 'The Liar Paradox',
         'Functional-Analysis' = 'Functional Analysis',
         'Pro-Sentential Theory of Truth' = 'A Pro-Sentential Theory of Truth',
         'Schizophrenia of Modern Ethical Theories' = 'The Schizophrenia of Modern Ethical Theories',
         'Semantics of Singular Terms' = 'The Semantics of Singular Terms',
+        'Should We Attempt To Justify Induction' = 'Should We Attempt to Justify Induction?',
+        'Wittgenstein Philosophy of Mathematics' = 'Wittgenstein\'s Philosophy of Mathematics',
+        'Plato Republic' = 'Plato\'s Republic',
+        'Nonaesthetic' = 'Non-Aesthetic',
+        'Psycho-Physical Identity Theory' = 'On the Psycho-Physical Identity Theory',
+        'Causal Theory of Knowing' = 'A Causal Theory of Knowing',
+        'Analysis of Factual Knowledge' = 'An Analysis of Factual Knowledge',
+        'Should Numbers Count' = 'Should the Numbers Count?',
+        'Modus-Ponens' = 'Modus Ponens',
+        'Equal-Opportunity for Welfare' = 'Equal Opportunity for Welfare',
+        'Conceptual Analysts Defense' = 'Conceptual Analyst\'s Defense',
+        'Antifoundationalism' = 'Anti-foundationalism',
+        'Decision-Theoretic' = 'Decision-theoretic',
+        'Guide to Possibility' = 'Guide to Possibility?',
+        'Less Ad-Hoc Theories' = 'Less _Ad Hoc_ Theories',
+        'Things Arent Equal' = 'Things Aren\'t Equal',
+        'Four Dimensionalism (Persistence Through Time, Doctrine of Temporal Parts, Perdurance)' = 'Four Dimensionalism',
+        'the \"Space of Reasons\"' = 'the \'Space of Reasons\'',
         ' - ' = ': ',
         ': a' = ': A',
         ': the' = ': The',
-        ': on' = ': On'
+        ': on' = ': On',
+        'Action: Problem' = 'Action: The Problem'
       )
     )
   )
@@ -266,8 +286,10 @@ philo_bib_fix_4 <- philo_bib_fix_3 |>
     art_title == "Probability and Conditionals" ~ "37 (1): 64-80",
     id == "WOS:000366669500008" ~ "58 (7-8): 828-874",
     id == "WOS:A1961CGR7700001" ~ "70 (1): 1-24",
+    id == "WOS:A1971J127200004" ~ "38 (1): 54-63",
     TRUE ~ end_of_longcite)
   ) |>
+  mutate(end_of_longcite = str_replace_all(end_of_longcite, " ", " ")) |>
   select(end_of_longcite, everything()) |>
   ungroup()
 

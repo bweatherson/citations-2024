@@ -78,6 +78,7 @@ load("final_articles_from_lda.RData")
 target_articles <- articles |>
   filter(journal == "Journal of Philosophy", year >= 1971, year <= 1974) |>
   mutate(journal = "Journal Of Philosophy") |>
+  mutate(title = tools::toTitleCase(title)) |>
   slice(-87) |> # Clears out an unneeded second pub by an author in a year
   mutate(short_auth = case_when(
     auth1 == "Hector-Neri Castaneda" ~ "Castaneda",
