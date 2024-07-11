@@ -2,9 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
-
 /.quarto/
 *.RData
 *.svg
 *.png
 *.rdb
+.DS_Store
