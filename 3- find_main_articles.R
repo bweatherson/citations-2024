@@ -3,7 +3,7 @@ require(slider)
 require(stringr)
 
 load("philo_bib_fix.RData")
-load("philo_cite.RData")
+load("philo_cite_with_jp.RData")
 
 authadjust <- function(x){
   paste0(str_extract(x, '\\b[^,]+$'), " ", str_to_title(str_extract(x,".+(?=,)")))
@@ -22,7 +22,7 @@ article_title <- philo_bib_fix |>
   as_tibble() |>
   select(id, author = auth, art_title, journal) 
 
-citation_tibble <- philo_cite |>
+citation_tibble <- philo_cite_with_jp |>
   as_tibble() |>
   rename(new = id, old = refs) |>
   left_join(article_years, by = c("old" = "id")) |>
@@ -71,7 +71,7 @@ for(year in (1956:2015)){
     main_article_ids,
     slice_max(all_cited, n, n=9, with_ties = FALSE)
   ) |>
-    filter(n >= 10)
+    filter(n >= 20)
 }
 
 name_fix <- c(
@@ -95,4 +95,5 @@ name_fix <- c(
 )
 
 main_bib <- main_article_ids |>
-  left_join(philo_bib_fix, by = c("old" = "id")) 
+  left_join(philo_bib_fix, by = c("old" = "id")) |>
+  select(-longcite)

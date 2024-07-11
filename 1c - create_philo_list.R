@@ -35,21 +35,3 @@ philo_cite <- master_cite %>%
 save(philo_bib, file = "philo_bib.RData")
 save(philo_cite, file = "philo_cite.RData")
 
-temp <- philo_cite %>%
-  group_by(id) %>%
-  tally() %>%
-  filter(n > 1)
-
-philo_cocite <- philo_cite %>%
-  filter(id %in% temp$id) %>%
-  group_by(id) %>%
-  arrange(refs) %>%
-  do(data.frame(t(combn(.$refs, 2))))
-
-philo_cocite_reverse <- philo_cocite %>%
-  rename(X2 = X1, X1 = X2)
-
-philo_cocite_double <- bind_rows(philo_cocite, philo_cocite_reverse)
-
-save(philo_cocite, file = "philo_cocite.RData")
-save(philo_cocite_double, file = "philo_cocite_double.RData")

@@ -1,0 +1,3666 @@
+
+## 1956 {#sec-s1956}
+
+### Widely Cited Articles {-}
+
+1. G Frege (1956) "The Thought: A Logical Inquiry," _Mind_ 65 (259): 289-311
+2. WV Quine (1956) "Quantifiers and Propositional Attitudes," _Journal Of Philosophy_ 53 (5): 177-187
+3. HP Grice and PF Strawson (1956) "In Defense of a Dogma," _Philosophical Review_ 65 (2): 141-158
+4. JG Kemeny and P Oppenheim (1956) "On Reduction," _Philosophical Studies_ 7 (1-2): 6-19
+
+### Citation Count {-#sec-count-1956}
+
+```{r}
+#| label: tbl-citation-count-1956
+#| tbl-cap: Citation count for widely cited articles from 1956.
+
+year_cites <- rank_table_generator(1956)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1956}
+
+```{r}
+#| label: tbl-citation-rank-1956
+#| tbl-cap: Citation rank for widely cited articles from 1956.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1956}
+
+```{r}
+#| label: fig-citation-spaghetti-1956
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1956.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1956)
+```
+
+```{r}
+#| label: fig-citation-facet-1956
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1956.
+#| cache: TRUE
+
+rolling_facet_graph(1956)
+```
+
+\newpage
+
+
+## 1957 {#sec-s1957}
+
+### Widely Cited Articles {-}
+
+1. HP Grice (1957) "Meaning," _Philosophical Review_ 66 (3): 377-388
+2. Z Vendler (1957) "Verbs and Times," _Philosophical Review_ 66 (2): 143-160
+3. WC Salmon (1957) "Should We Attempt To Justify Induction," _Philosophical Studies_ 8 (3): 33-48
+4. JWN Watkins (1957) "Historical Explanation in the Social-Sciences," _British Journal For The Philosophy Of Science_ 8 (30): 104-117
+5. HJ Mccloskey (1957) "An Examination of Restricted Utilitarianism," _Philosophical Review_ 66 (4): 466-485
+6. WV Quine (1957) "The Scope and Language of Science," _British Journal For The Philosophy Of Science_ 8 (29): 1-17
+
+### Citation Count {-#sec-count-1957}
+
+```{r}
+#| label: tbl-citation-count-1957
+#| tbl-cap: Citation count for widely cited articles from 1957.
+
+year_cites <- rank_table_generator(1957)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1957}
+
+```{r}
+#| label: tbl-citation-rank-1957
+#| tbl-cap: Citation rank for widely cited articles from 1957.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1957}
+
+```{r}
+#| label: fig-citation-spaghetti-1957
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1957.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1957)
+```
+
+```{r}
+#| label: fig-citation-facet-1957
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1957.
+#| cache: TRUE
+
+rolling_facet_graph(1957)
+```
+
+\newpage
+
+
+## 1958 {#sec-s1958}
+
+### Widely Cited Articles {-}
+
+1. GEM Anscombe (1958) "Modern Moral-Philosophy," _Philosophy_ 33 (124): 1-19
+2. JR Searle (1958) "Proper Names," _Mind_ 67 (266): 166-173
+3. J Rawls (1958) "Justice as Fairness," _Philosophical Review_ 67 (2): 164-194
+4. P Foot (1958) "Moral Arguments," _Mind_ 67 (268): 502-513
+5. S Hampshire and HLA Hart (1958) "Decision, Intention and Certainty," _Mind_ 67 (265): 1-12
+6. WP Alston (1958) "Ontological Commitments," _Philosophical Studies_ 9 (1-2): 8-17
+7. N Rescher (1958) "An Axiom System for Deontic Logic," _Philosophical Studies_ 9 (1-2): 24-30
+
+### Citation Count {-#sec-count-1958}
+
+```{r}
+#| label: tbl-citation-count-1958
+#| tbl-cap: Citation count for widely cited articles from 1958.
+
+year_cites <- rank_table_generator(1958)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1958}
+
+```{r}
+#| label: tbl-citation-rank-1958
+#| tbl-cap: Citation rank for widely cited articles from 1958.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1958}
+
+```{r}
+#| label: fig-citation-spaghetti-1958
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1958.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1958)
+```
+
+```{r}
+#| label: fig-citation-facet-1958
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1958.
+#| cache: TRUE
+
+rolling_facet_graph(1958)
+```
+
+\newpage
+
+
+## 1959 {#sec-s1959}
+
+### Widely Cited Articles {-}
+
+1. JJC Smart (1959) "Sensations and Brain Processes," _Philosophical Review_ 68 (2): 141-156
+2. F Sibley (1959) "Aesthetic Concepts," _Philosophical Review_ 68 (4): 421-450
+3. AN Prior (1959) "Thank Goodness Thats Over," _Philosophy_ 34 (128): 12-17
+4. KR Popper (1959) "The Propensity Interpretation of Probability," _British Journal For The Philosophy Of Science_ 10 (37): 25-42
+5. M Dummett (1959) "Wittgenstein Philosophy of Mathematics," _Philosophical Review_ 68 (3): 324-348
+
+### Citation Count {-#sec-count-1959}
+
+```{r}
+#| label: tbl-citation-count-1959
+#| tbl-cap: Citation count for widely cited articles from 1959.
+
+year_cites <- rank_table_generator(1959)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1959}
+
+```{r}
+#| label: tbl-citation-rank-1959
+#| tbl-cap: Citation rank for widely cited articles from 1959.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1959}
+
+```{r}
+#| label: fig-citation-spaghetti-1959
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1959.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1959)
+```
+
+```{r}
+#| label: fig-citation-facet-1959
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1959.
+#| cache: TRUE
+
+rolling_facet_graph(1959)
+```
+
+\newpage
+
+
+## 1960 {#sec-s1960}
+
+### Widely Cited Articles {-}
+
+1. PT Geach (1960) "Ascriptivism," _Philosophical Review_ 69 (2): 221-225
+2. N Malcolm (1960) "Anselm Ontological Arguments," _Philosophical Review_ 69 (1): 41-62
+3. I Levi (1960) "Must the Scientist Make Value Judgments," _Journal Of Philosophy_ 57 (11): 345-357
+4. M Dummett (1960) "A Defense of Mctaggarts Proof of the Unreality of Time," _Philosophical Review_ 69 (4): 497-504
+5. J Myhill (1960) "Some Remarks on the Notion of Proof," _Journal Of Philosophy_ 57 (14): 461-471
+
+### Citation Count {-#sec-count-1960}
+
+```{r}
+#| label: tbl-citation-count-1960
+#| tbl-cap: Citation count for widely cited articles from 1960.
+
+year_cites <- rank_table_generator(1960)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1960}
+
+```{r}
+#| label: tbl-citation-rank-1960
+#| tbl-cap: Citation rank for widely cited articles from 1960.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1960}
+
+```{r}
+#| label: fig-citation-spaghetti-1960
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1960.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1960)
+```
+
+```{r}
+#| label: fig-citation-facet-1960
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1960.
+#| cache: TRUE
+
+rolling_facet_graph(1960)
+```
+
+\newpage
+
+
+## 1961 {#sec-s1961}
+
+### Widely Cited Articles {-}
+
+1. JJC Smart (1961) "Free-Will, Praise and Blame," _Mind_ 70 (279): 291-306
+2. JR Lucas (1961) "Minds, Machines and Godel," _Philosophy_ 36 (137): 112-127
+3. IJ Good (1961) "A Causal Calculus .1.," _British Journal For The Philosophy Of Science_ 11 (44): 305-318
+4. IJ Good (1961) "A Causal Calculus (Ii)," _British Journal For The Philosophy Of Science_ 12 (45): 43-51
+5. N Goodman (1961) "About .1.," _Mind_ 1 70 (277): 1-24
+
+### Citation Count {-#sec-count-1961}
+
+```{r}
+#| label: tbl-citation-count-1961
+#| tbl-cap: Citation count for widely cited articles from 1961.
+
+year_cites <- rank_table_generator(1961)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1961}
+
+```{r}
+#| label: tbl-citation-rank-1961
+#| tbl-cap: Citation rank for widely cited articles from 1961.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1961}
+
+```{r}
+#| label: fig-citation-spaghetti-1961
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1961.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1961)
+```
+
+```{r}
+#| label: fig-citation-facet-1961
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1961.
+#| cache: TRUE
+
+rolling_facet_graph(1961)
+```
+
+\newpage
+
+
+## 1962 {#sec-s1962}
+
+### Widely Cited Articles {-}
+
+1. EJ Lemmon (1962) "Moral Dilemmas," _Philosophical Review_ 71 (2): 139-158
+2. H Putnam (1962) "It Aint Necessarily So," _Journal Of Philosophy_ 59 (22): 658-671
+3. JR Searle (1962) "Meaning and Speech Acts," _Philosophical Review_ 71 (4): 423-432
+4. J Hintikka (1962) "Cogito, Ergo Sum: Inference or Performance," _Philosophical Review_ 71 (1): 3-32
+5. P Benacerraf (1962) "Tasks, Super-Tasks, and the Modern Eleatics," _Journal Of Philosophy_ 59 (24): 765-784
+6. AR Anderson and ND Belnap (1962) "Tautological Entailments," _Philosophical Studies_ 13 (1-2): 9-24
+7. C Ginet (1962) "Can the Will Be Caused," _Philosophical Review_ 71 (1): 49-55
+8. I Levi (1962) "On the Seriousness of Mistakes," _Philosophy Of Science_ 29 (1): 47-65
+
+### Citation Count {-#sec-count-1962}
+
+```{r}
+#| label: tbl-citation-count-1962
+#| tbl-cap: Citation count for widely cited articles from 1962.
+
+year_cites <- rank_table_generator(1962)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1962}
+
+```{r}
+#| label: tbl-citation-rank-1962
+#| tbl-cap: Citation rank for widely cited articles from 1962.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1962}
+
+```{r}
+#| label: fig-citation-spaghetti-1962
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1962.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1962)
+```
+
+```{r}
+#| label: fig-citation-facet-1962
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1962.
+#| cache: TRUE
+
+rolling_facet_graph(1962)
+```
+
+\newpage
+
+
+## 1963 {#sec-s1963}
+
+### Widely Cited Articles {-}
+
+1. DM Armstrong (1963) "Is Introspective Knowledge Incorrigible," _Philosophical Review_ 72 (4): 417-432
+2. F Sommers (1963) "Types and Ontology," _Philosophical Review_ 72 (3): 327-363
+3. A Danto (1963) "What We Can Do," _Journal Of Philosophy_ 60 (15): 435-445
+4. W Sellars (1963) "Abstract Entities," _Review Of Metaphysics_ 16 (4): 627-671
+5. D Sachs (1963) "A Fallacy in Plato Republic," _Philosophical Review_ 72 (2): 141-158
+6. GI Mavrodes (1963) "Some Puzzles Concerning Omnipotence," _Philosophical Review_ 72 (2): 221-223
+7. KS Donnellan (1963) "Knowing What I Am Doing," _Journal Of Philosophy_ 60 (14): 401-409
+8. JR Silber (1963) "The Importance of the Highest Good in Kants Ethics," _Ethics_ 73 (3): 179-197
+
+### Citation Count {-#sec-count-1963}
+
+```{r}
+#| label: tbl-citation-count-1963
+#| tbl-cap: Citation count for widely cited articles from 1963.
+
+year_cites <- rank_table_generator(1963)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1963}
+
+```{r}
+#| label: tbl-citation-rank-1963
+#| tbl-cap: Citation rank for widely cited articles from 1963.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1963}
+
+```{r}
+#| label: fig-citation-spaghetti-1963
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1963.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1963)
+```
+
+```{r}
+#| label: fig-citation-facet-1963
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1963.
+#| cache: TRUE
+
+rolling_facet_graph(1963)
+```
+
+\newpage
+
+
+## 1964 {#sec-s1964}
+
+### Widely Cited Articles {-}
+
+1. A Danto (1964) "The Artworld," _Journal Of Philosophy_ 61 (19): 571-584
+2. PF Strawson (1964) "Intention and Convention in Speech Acts," _Philosophical Review_ 73 (4): 439-460
+3. JR Searle (1964) "How To Derive Ought From Is," _Philosophical Review_ 73 (1): 43-58
+4. M Dummett (1964) "Bringing About the Past," _Philosophical Review_ 73 (3): 338-359
+5. G Dickie (1964) "The Myth of the Aesthetic Attitude .5.," _American Philosophical Quarterly_ 1 (1): 56-65
+
+### Citation Count {-#sec-count-1964}
+
+```{r}
+#| label: tbl-citation-count-1964
+#| tbl-cap: Citation count for widely cited articles from 1964.
+
+year_cites <- rank_table_generator(1964)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1964}
+
+```{r}
+#| label: tbl-citation-rank-1964
+#| tbl-cap: Citation rank for widely cited articles from 1964.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1964}
+
+```{r}
+#| label: fig-citation-spaghetti-1964
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1964.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1964)
+```
+
+```{r}
+#| label: fig-citation-facet-1964
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1964.
+#| cache: TRUE
+
+rolling_facet_graph(1964)
+```
+
+\newpage
+
+
+## 1965 {#sec-s1965}
+
+### Widely Cited Articles {-}
+
+1. P Benacerraf (1965) "What Numbers Could Not Be," _Philosophical Review_ 74 (1): 47-73
+2. GH Harman (1965) "The Inference To the Best Explanation," _Philosophical Review_ 74 (1): 88-95
+3. PT Geach (1965) "Assertion," _Philosophical Review_ 74 (4): 449-465
+4. JL Mackie (1965) "Causes and Conditions," _American Philosophical Quarterly_ 2 (4): 245-264
+5. R Rorty (1965) "Mind-Body Identity, Privacy, and Categories," _Review Of Metaphysics_ 19 (1): 24-54
+6. DL Hull (1965) "The Effect of Essentialism on Taxonomy: 2000 Years of Stasis .1.," _British Journal For The Philosophy Of Science_ 15 (60): 314-326
+7. F Sibley (1965) "Aesthetic and Nonaesthetic," _Philosophical Review_ 74 (2): 135-159
+8. J Feinberg (1965) "The Expressive Function of Punishment," _Monist_ 49 (3): 397-423
+
+### Citation Count {-#sec-count-1965}
+
+```{r}
+#| label: tbl-citation-count-1965
+#| tbl-cap: Citation count for widely cited articles from 1965.
+
+year_cites <- rank_table_generator(1965)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1965}
+
+```{r}
+#| label: tbl-citation-rank-1965
+#| tbl-cap: Citation rank for widely cited articles from 1965.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1965}
+
+```{r}
+#| label: fig-citation-spaghetti-1965
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1965.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1965)
+```
+
+```{r}
+#| label: fig-citation-facet-1965
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1965.
+#| cache: TRUE
+
+rolling_facet_graph(1965)
+```
+
+\newpage
+
+
+## 1966 {#sec-s1966}
+
+### Widely Cited Articles {-}
+
+1. KS Donnellan (1966) "Reference and Definite Descriptions," _Philosophical Review_ 75 (3): 281-304
+2. DK Lewis (1966) "Argument for Identity Theory," _Journal Of Philosophy_ 63 (1): 17-25
+3. CB Martin and M Deutscher (1966) "Remembering," _Philosophical Review_ 75 (2): 161-196
+4. BC van Fraassen (1966) "Singular Terms, Truth-Value Gaps, and Free Logic," _Journal Of Philosophy_ 63 (17): 481-495
+5. J Kim (1966) "Psycho-Physical Identity Theory," _American Philosophical Quarterly_ 3 (3): 227-235
+6. CW Rietdijk (1966) "Rigorous Proof of Determinism Derived From Special Theory of Relativity," _Philosophy Of Science_ 33 (4): 341-344
+
+### Citation Count {-#sec-count-1966}
+
+```{r}
+#| label: tbl-citation-count-1966
+#| tbl-cap: Citation count for widely cited articles from 1966.
+
+year_cites <- rank_table_generator(1966)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1966}
+
+```{r}
+#| label: tbl-citation-rank-1966
+#| tbl-cap: Citation rank for widely cited articles from 1966.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1966}
+
+```{r}
+#| label: fig-citation-spaghetti-1966
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1966.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1966)
+```
+
+```{r}
+#| label: fig-citation-facet-1966
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1966.
+#| cache: TRUE
+
+rolling_facet_graph(1966)
+```
+
+\newpage
+
+
+## 1967 {#sec-s1967}
+
+### Widely Cited Articles {-}
+
+1. AI Goldman (1967) "Causal Theory of Knowing," _Journal Of Philosophy_ 64 (12): 357-372
+2. D Davidson (1967) "Truth and Meaning," _Synthese_ 17 (3): 304-323
+3. D Davidson (1967) "Causal Relations," _Journal Of Philosophy_ 64 (21): 691-703
+4. HN Castañeda (1967) "Indicators and Quasi-Indicators," _American Philosophical Quarterly_ 4 (2): 85-100
+5. KF Schaffner (1967) "Approaches To Reduction," _Philosophy Of Science_ 34 (2): 137-147
+6. H Putnam (1967) "Time and Physical Geometry," _Journal Of Philosophy_ 64 (8): 240-247
+7. I Hacking (1967) "Possibility," _Philosophical Review_ 76 (2): 143-168
+8. I Hacking (1967) "Slightly More Realistic Personal Probability," _Philosophy Of Science_ 34 (4): 311-325
+9. B Ellis and P Bowman (1967) "Conventionality in Distant Simulataneity," _Philosophy Of Science_ 34 (2): 116-136
+
+### Citation Count {-#sec-count-1967}
+
+```{r}
+#| label: tbl-citation-count-1967
+#| tbl-cap: Citation count for widely cited articles from 1967.
+
+year_cites <- rank_table_generator(1967)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1967}
+
+```{r}
+#| label: tbl-citation-rank-1967
+#| tbl-cap: Citation rank for widely cited articles from 1967.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1967}
+
+```{r}
+#| label: fig-citation-spaghetti-1967
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1967.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1967)
+```
+
+```{r}
+#| label: fig-citation-facet-1967
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1967.
+#| cache: TRUE
+
+rolling_facet_graph(1967)
+```
+
+\newpage
+
+
+## 1968 {#sec-s1968}
+
+### Widely Cited Articles {-}
+
+1. DK Lewis (1968) "Counterpart Theory and Quantified Modal Logic," _Journal Of Philosophy_ 65 (5): 113-126
+2. SS Shoemaker (1968) "Self-Reference and Self-Awareness," _Journal Of Philosophy_ 65 (19): 555-567
+3. B Stroud (1968) "Transcendental Arguments," _Journal Of Philosophy_ 65 (9): 241-256
+4. P Unger (1968) "Analysis of Factual Knowledge," _Journal Of Philosophy_ 65 (6): 157-170
+5. H Morris (1968) "Persons and Punishment," _Monist_ 52 (4): 475-501
+6. WV Quine (1968) "Ontological Relativity," _Journal Of Philosophy_ 65 (7): 185-212
+7. BC van Fraassen (1968) "Presupposition, Implication, and Self-Reference," _Journal Of Philosophy_ 65 (5): 136-151
+8. G Harman (1968) "Knowledge, Inference, and Explanation," _American Philosophical Quarterly_ 5 (3): 164-173
+
+### Citation Count {-#sec-count-1968}
+
+```{r}
+#| label: tbl-citation-count-1968
+#| tbl-cap: Citation count for widely cited articles from 1968.
+
+year_cites <- rank_table_generator(1968)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1968}
+
+```{r}
+#| label: tbl-citation-rank-1968
+#| tbl-cap: Citation rank for widely cited articles from 1968.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1968}
+
+```{r}
+#| label: fig-citation-spaghetti-1968
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1968.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1968)
+```
+
+```{r}
+#| label: fig-citation-facet-1968
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1968.
+#| cache: TRUE
+
+rolling_facet_graph(1968)
+```
+
+\newpage
+
+
+## 1969 {#sec-s1969}
+
+### Widely Cited Articles {-}
+
+1. HG Frankfurt (1969) "Alternate Possibilities and Moral Responsibility," _Journal Of Philosophy_ 66 (23): 829-839
+2. K Lehrer and T Paxson (1969) "Knowledge: Undefeated Justified True Belief," _Journal Of Philosophy_ 66 (8): 225-237
+3. HP Grice (1969) "Utterers Meaning and Intentions," _Philosophical Review_ 78 (2): 147-177
+4. BC van Fraassen (1969) "Facts and Tautological Entailments," _Journal Of Philosophy_ 66 (15): 477-487
+5. S Shoemaker (1969) "Time Without Change," _Journal Of Philosophy_ 66 (12): 363-381
+6. JA Goguen (1969) "Logic of Inexact Concepts," _Synthese_ 19 (3-4): 325-373
+7. JP Day (1969) "Hope," _American Philosophical Quarterly_ 6 (2): 89-102
+
+### Citation Count {-#sec-count-1969}
+
+```{r}
+#| label: tbl-citation-count-1969
+#| tbl-cap: Citation count for widely cited articles from 1969.
+
+year_cites <- rank_table_generator(1969)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1969}
+
+```{r}
+#| label: tbl-citation-rank-1969
+#| tbl-cap: Citation rank for widely cited articles from 1969.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1969}
+
+```{r}
+#| label: fig-citation-spaghetti-1969
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1969.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1969)
+```
+
+```{r}
+#| label: fig-citation-facet-1969
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1969.
+#| cache: TRUE
+
+rolling_facet_graph(1969)
+```
+
+\newpage
+
+
+## 1970 {#sec-s1970}
+
+### Widely Cited Articles {-}
+
+1. FI Dretske (1970) "Epistemic Operators," _Journal Of Philosophy_ 67 (24): 1007-1023
+2. D Lewis (1970) "How To Define Theoretical Terms," _Journal Of Philosophy_ 67 (13): 427-446
+3. KL Walton (1970) "Categories of Art," _Philosophical Review_ 79 (3): 334-367
+4. S Shoemaker (1970) "Persons and Their Pasts," _American Philosophical Quarterly_ 7 (4): 269-285
+5. STALNAKE.RC NA (1970) "Probability and Conditionals," _Philosophy Of Science_ 37 (1): 64-&
+6. WV Quine (1970) "Reasons for Indeterminacy of Translation," _Journal Of Philosophy_ 67 (6): 178-183
+7. R Rorty (1970) "Incorrigibility as Mark of Mental," _Journal Of Philosophy_ 67 (12): 399-424
+
+### Citation Count {-#sec-count-1970}
+
+```{r}
+#| label: tbl-citation-count-1970
+#| tbl-cap: Citation count for widely cited articles from 1970.
+
+year_cites <- rank_table_generator(1970)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1970}
+
+```{r}
+#| label: tbl-citation-rank-1970
+#| tbl-cap: Citation rank for widely cited articles from 1970.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1970}
+
+```{r}
+#| label: fig-citation-spaghetti-1970
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1970.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1970)
+```
+
+```{r}
+#| label: fig-citation-facet-1970
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1970.
+#| cache: TRUE
+
+rolling_facet_graph(1970)
+```
+
+\newpage
+
+
+## 1971 {#sec-s1971}
+
+### Widely Cited Articles {-}
+
+1. H Frankfurt (1971) "Freedom Of The Will And The Concept Of A Person," _Journal of Philosophy_ 68 (1): 5-20
+2. JJ Thomson (1971) "Defense of Abortion," _Philosophy & Public Affairs_ 1 (1): 47-66
+3. D Parfit (1971) "Personal Identity," _Philosophical Review_ 80 (1): 3-27
+4. D Lewis (1971) "Counterparts Of Persons And Their Bodies," _Journal of Philosophy_ 68 (7): 203-211
+5. D Dennett (1971) "Intentional Systems," _Journal of Philosophy_ 68 (4): 87-106
+6. G Boolos (1971) "The Iterative Conception Of Set," _Journal of Philosophy_ 68 (8): 215-231
+7. D Lewis (1971) "Immodest Inductive Methods," _Philosophy Of Science_ 38 (1): 54-&
+8. A Goldman (1971) "The Individuation Of Action," _Journal of Philosophy_ 68 (21): 761-774
+9. P Klein (1971) "A Proposed Definition Of Propositional Knowledge," _Journal of Philosophy_ 68 (16): 471-482
+
+### Citation Count {-#sec-count-1971}
+
+```{r}
+#| label: tbl-citation-count-1971
+#| tbl-cap: Citation count for widely cited articles from 1971.
+
+year_cites <- rank_table_generator(1971)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1971}
+
+```{r}
+#| label: tbl-citation-rank-1971
+#| tbl-cap: Citation rank for widely cited articles from 1971.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1971}
+
+```{r}
+#| label: fig-citation-spaghetti-1971
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1971.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1971)
+```
+
+```{r}
+#| label: fig-citation-facet-1971
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1971.
+#| cache: TRUE
+
+rolling_facet_graph(1971)
+```
+
+\newpage
+
+
+## 1972 {#sec-s1972}
+
+### Widely Cited Articles {-}
+
+1. P Singer (1972) "Famine, Affluence, and Morality," _Philosophy & Public Affairs_ 1 (3): 229-243
+2. H Field (1972) "Tarski's Theory Of Truth," _Journal of Philosophy_ 69 (13): 347-375
+3. P Foot (1972) "Morality as a System of Hypothetical Imperatives," _Philosophical Review_ 81 (3): 305-316
+4. NJ Block and JA Fodor (1972) "What Psychological States Are Not," _Philosophical Review_ 81 (2): 159-181
+5. J Perry (1972) "Can The Self Divide?," _Journal of Philosophy_ 69 (16): 463-488
+6. G Dworkin (1972) "Paternalism," _Monist_ 56 (1): 64-84
+7. R Routley and RK Meyer (1972) "Semantics of Entailment .2.," _Journal Of Philosophical Logic_ 1 (1): 53-73
+8. R Rorty (1972) "The World Well Lost," _Journal of Philosophy_ 69 (19): 649-665
+9. R Causey (1972) "Attribute-Identities In Microreductions," _Journal of Philosophy_ 69 (14): 407-422
+
+### Citation Count {-#sec-count-1972}
+
+```{r}
+#| label: tbl-citation-count-1972
+#| tbl-cap: Citation count for widely cited articles from 1972.
+
+year_cites <- rank_table_generator(1972)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1972}
+
+```{r}
+#| label: tbl-citation-rank-1972
+#| tbl-cap: Citation rank for widely cited articles from 1972.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1972}
+
+```{r}
+#| label: fig-citation-spaghetti-1972
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1972.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1972)
+```
+
+```{r}
+#| label: fig-citation-facet-1972
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1972.
+#| cache: TRUE
+
+rolling_facet_graph(1972)
+```
+
+\newpage
+
+
+## 1973 {#sec-s1973}
+
+### Widely Cited Articles {-}
+
+1. D Lewis (1973) "Causation," _Journal of Philosophy_ 70 (17): 556-567
+2. P Benacerraf (1973) "Mathematical Truth," _Journal of Philosophy_ 70 (19): 661-679
+3. L Wright (1973) "Functions," _Philosophical Review_ 82 (2): 139-168
+4. H Putnam (1973) "Meaning And Reference," _Journal of Philosophy_ 70 (19): 699-711
+5. H Field (1973) "Theory Change And The Indeterminacy Of Reference," _Journal of Philosophy_ 70 (14): 462-481
+6. J Kim (1973) "Causation, Nomic Subsumption, And The Concept Of Event," _Journal of Philosophy_ 70 (8): 217-236
+7. T Burge (1973) "Reference And Proper Names," _Journal of Philosophy_ 70 (14): 425-439
+8. M Walzer (1973) "Political Action: Problem of Dirty Hands," _Philosophy & Public Affairs_ 2 (2): 160-180
+9. E Zahar (1973) "Why Did Einsteins Programme Supersede Lorentzs .1.," _British Journal For The Philosophy Of Science_ 24 (2): 95-123
+
+### Citation Count {-#sec-count-1973}
+
+```{r}
+#| label: tbl-citation-count-1973
+#| tbl-cap: Citation count for widely cited articles from 1973.
+
+year_cites <- rank_table_generator(1973)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1973}
+
+```{r}
+#| label: tbl-citation-rank-1973
+#| tbl-cap: Citation rank for widely cited articles from 1973.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1973}
+
+```{r}
+#| label: fig-citation-spaghetti-1973
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1973.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1973)
+```
+
+```{r}
+#| label: fig-citation-facet-1973
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1973.
+#| cache: TRUE
+
+rolling_facet_graph(1973)
+```
+
+\newpage
+
+
+## 1974 {#sec-s1974}
+
+### Widely Cited Articles {-}
+
+1. T Nagel (1974) "What is It Like To Be a Bat," _Philosophical Review_ 83 (4): 435-450
+2. M Friedman (1974) "Explanation And Scientific Understanding," _Journal of Philosophy_ 71 (1): 5-19
+3. I Levi (1974) "On Indeterminate Probabilities," _Journal of Philosophy_ 71 (13): 391-418
+4. KS Donnellan (1974) "Speaking of Nothing," _Philosophical Review_ 83 (1): 3-31
+5. C Parsons (1974) "Liar Paradox," _Journal Of Philosophical Logic_ 3 (4): 381-412
+6. P Singer (1974) "Sidgwick and Reflective Equilibrium," _Monist_ 58 (3): 490-517
+7. M Devitt (1974) "Singular Terms," _Journal of Philosophy_ 71 (7): 183-205
+8. T Parsons (1974) "A Prolegomenon To Meinongian Semantics," _Journal of Philosophy_ 71 (16): 561-580
+9. NL Wilson (1974) "Facts, Events and Their Identity Conditions," _Philosophical Studies_ 25 (5): 303-321
+
+### Citation Count {-#sec-count-1974}
+
+```{r}
+#| label: tbl-citation-count-1974
+#| tbl-cap: Citation count for widely cited articles from 1974.
+
+year_cites <- rank_table_generator(1974)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1974}
+
+```{r}
+#| label: tbl-citation-rank-1974
+#| tbl-cap: Citation rank for widely cited articles from 1974.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1974}
+
+```{r}
+#| label: fig-citation-spaghetti-1974
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1974.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1974)
+```
+
+```{r}
+#| label: fig-citation-facet-1974
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1974.
+#| cache: TRUE
+
+rolling_facet_graph(1974)
+```
+
+\newpage
+
+
+## 1975 {#sec-s1975}
+
+### Widely Cited Articles {-}
+
+1. S Kripke (1975) "Outline of a Theory of Truth," _Journal Of Philosophy_ 72 (19): 690-716
+2. R Cummins (1975) "Functional-Analysis," _Journal Of Philosophy_ 72 (20): 741-765
+3. G Watson (1975) "Free Agency," _Journal Of Philosophy_ 72 (8): 205-220
+4. A Gibbard (1975) "Contingent Identity," _Journal Of Philosophical Logic_ 4 (2): 187-221
+5. R Stalnaker (1975) "Indicative Conditionals," _Philosophia_ 5 (3): 269-286
+6. GP Hellman and FW Thompson (1975) "Physicalism: Ontology, Determination, and Reduction," _Journal Of Philosophy_ 72 (17): 551-564
+7. DL Grover, JL Camp, and ND Belnap (1975) "Pro-Sentential Theory of Truth," _Philosophical Studies_ 27 (2): 73-125
+8. D Kaplan (1975) "Sets, Concepts and Extensions: How To Russell a Frege-Church," _Journal Of Philosophy_ 72 (19): 716-729
+9. G Harman (1975) "Moral Relativism Defended," _Philosophical Review_ 84 (1): 3-22
+
+### Citation Count {-#sec-count-1975}
+
+```{r}
+#| label: tbl-citation-count-1975
+#| tbl-cap: Citation count for widely cited articles from 1975.
+
+year_cites <- rank_table_generator(1975)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1975}
+
+```{r}
+#| label: tbl-citation-rank-1975
+#| tbl-cap: Citation rank for widely cited articles from 1975.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1975}
+
+```{r}
+#| label: fig-citation-spaghetti-1975
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1975.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1975)
+```
+
+```{r}
+#| label: fig-citation-facet-1975
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1975.
+#| cache: TRUE
+
+rolling_facet_graph(1975)
+```
+
+\newpage
+
+
+## 1976 {#sec-s1976}
+
+### Widely Cited Articles {-}
+
+1. AI Goldman (1976) "Discrimination and Perceptual Knowledge," _Journal Of Philosophy_ 73 (20): 771-791
+2. D Lewis (1976) "Probabilities of Conditionals and Conditional Probabilities," _Philosophical Review_ 85 (3): 297-315
+3. D Lewis (1976) "Paradoxes of Time Travel," _American Philosophical Quarterly_ 13 (2): 145-152
+4. M Stocker (1976) "Schizophrenia of Modern Ethical Theories," _Journal Of Philosophy_ 73 (14): 453-466
+5. G Harman (1976) "Practical Reasoning," _Review Of Metaphysics_ 29 (3): 431-463
+6. RC Stalnaker (1976) "Possible Worlds," _Noûs_ 10 (1): 65-75
+7. JM Dunn (1976) "Intuitive Semantics for First-Degree Entailments and Coupled Trees," _Philosophical Studies_ 29 (3): 149-168
+8. WP Alston (1976) "Two Types of Foundationalism," _Journal Of Philosophy_ 73 (7): 165-185
+9. B Loar (1976) "Semantics of Singular Terms," _Philosophical Studies_ 30 (6): 353-377
+
+### Citation Count {-#sec-count-1976}
+
+```{r}
+#| label: tbl-citation-count-1976
+#| tbl-cap: Citation count for widely cited articles from 1976.
+
+year_cites <- rank_table_generator(1976)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1976}
+
+```{r}
+#| label: tbl-citation-rank-1976
+#| tbl-cap: Citation rank for widely cited articles from 1976.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1976}
+
+```{r}
+#| label: fig-citation-spaghetti-1976
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1976.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1976)
+```
+
+```{r}
+#| label: fig-citation-facet-1976
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1976.
+#| cache: TRUE
+
+rolling_facet_graph(1976)
+```
+
+\newpage
+
+
+## 1977 {#sec-s1977}
+
+### Widely Cited Articles {-}
+
+1. FI Dretske (1977) "Laws of Nature," _Philosophy Of Science_ 44 (2): 248-268
+2. SL Darwall (1977) "Two Kinds of Respect," _Ethics_ 88 (1): 36-49
+3. J Perry (1977) "Frege on Demonstratives," _Philosophical Review_ 86 (4): 474-497
+4. M Tooley (1977) "Nature of Laws," _Canadian Journal Of Philosophy_ 7 (4): 667-698
+5. JM Taurek (1977) "Should Numbers Count," _Philosophy & Public Affairs_ 6 (4): 293-316
+6. T Burge (1977) "Belief De Re," _Journal Of Philosophy_ 74 (6): 338-362
+7. C Boorse (1977) "Health as a Theoretical Concept," _Philosophy Of Science_ 44 (4): 542-573
+8. HN Castañeda (1977) "Perception, Belief, and Structure of Physical Objects and Consciousness," _Synthese_ 35 (3): 285-351
+9. HH Field (1977) "Logic, Meaning, and Conceptual Role," _Journal Of Philosophy_ 74 (7): 379-409
+
+### Citation Count {-#sec-count-1977}
+
+```{r}
+#| label: tbl-citation-count-1977
+#| tbl-cap: Citation count for widely cited articles from 1977.
+
+year_cites <- rank_table_generator(1977)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1977}
+
+```{r}
+#| label: tbl-citation-rank-1977
+#| tbl-cap: Citation rank for widely cited articles from 1977.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1977}
+
+```{r}
+#| label: fig-citation-spaghetti-1977
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1977.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1977)
+```
+
+```{r}
+#| label: fig-citation-facet-1977
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1977.
+#| cache: TRUE
+
+rolling_facet_graph(1977)
+```
+
+\newpage
+
+
+## 1978 {#sec-s1978}
+
+### Widely Cited Articles {-}
+
+1. D Lewis (1978) "Truth in Fiction," _American Philosophical Quarterly_ 15 (1): 37-46
+2. DL Hull (1978) "A Matter of Individuality," _Philosophy Of Science_ 45 (3): 335-360
+3. KL Walton (1978) "Fearing Fictions," _Journal Of Philosophy_ 75 (1): 5-27
+4. HG Frankfurt (1978) "The Problem of Action," _American Philosophical Quarterly_ 15 (2): 157-162
+5. PR Thagard (1978) "The Best Explanation: Criteria for Theory Choice," _Journal Of Philosophy_ 75 (2): 76-92
+6. M Steiner (1978) "Mathematical Explanation," _Philosophical Studies_ 34 (2): 135-151
+7. J Kim (1978) "Supervenience and Nomological Incommensurables," _American Philosophical Quarterly_ 15 (2): 149-156
+8. GS Kavka (1978) "Some Paradoxes of Deterrence," _Journal Of Philosophy_ 75 (6): 285-302
+9. L BonJour (1978) "Can Empirical Knowledge Have a Foundation?," _American Philosophical Quarterly_ 15 (1): 1-13
+
+### Citation Count {-#sec-count-1978}
+
+```{r}
+#| label: tbl-citation-count-1978
+#| tbl-cap: Citation count for widely cited articles from 1978.
+
+year_cites <- rank_table_generator(1978)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1978}
+
+```{r}
+#| label: tbl-citation-rank-1978
+#| tbl-cap: Citation rank for widely cited articles from 1978.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1978}
+
+```{r}
+#| label: fig-citation-spaghetti-1978
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1978.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1978)
+```
+
+```{r}
+#| label: fig-citation-facet-1978
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1978.
+#| cache: TRUE
+
+rolling_facet_graph(1978)
+```
+
+\newpage
+
+
+## 1979 {#sec-s1979}
+
+### Widely Cited Articles {-}
+
+1. J Perry (1979) "The Problem of the Essential Indexical," _Noûs_ 13 (1): 3-21
+2. D Lewis (1979) "Attitudes De Dicto and De Se," _Philosophical Review_ 88 (4): 513-543
+3. D Lewis (1979) "Counterfactual Dependence and Time's Arrow," _Noûs_ 13 (4): 455-476
+4. D Lewis (1979) "Scorekeeping in a Language Game," _Journal Of Philosophical Logic_ 8 (3): 339-359
+5. J McDowell (1979) "Virtue and Reason," _Monist_ 62 (3): 331-350
+6. G Priest (1979) "The Logic of Paradox," _Journal Of Philosophical Logic_ 8 (2): 219-241
+7. N Daniels (1979) "Wide Reflective Equilibrium and Theory Acceptance in Ethics," _Journal Of Philosophy_ 76 (5): 256-282
+8. N Cartwright (1979) "Causal Laws and Effective Strategies," _Noûs_ 13 (4): 419-437
+9. RM Adams (1979) "Primitive Thisness and Primitive Identity," _Journal Of Philosophy_ 76 (1): 5-26
+
+### Citation Count {-#sec-count-1979}
+
+```{r}
+#| label: tbl-citation-count-1979
+#| tbl-cap: Citation count for widely cited articles from 1979.
+
+year_cites <- rank_table_generator(1979)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1979}
+
+```{r}
+#| label: tbl-citation-rank-1979
+#| tbl-cap: Citation rank for widely cited articles from 1979.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1979}
+
+```{r}
+#| label: fig-citation-spaghetti-1979
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1979.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1979)
+```
+
+```{r}
+#| label: fig-citation-facet-1979
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1979.
+#| cache: TRUE
+
+rolling_facet_graph(1979)
+```
+
+\newpage
+
+
+## 1980 {#sec-s1980}
+
+### Widely Cited Articles {-}
+
+1. J Rawls (1980) "Rational and Full Autonomy," _Journal Of Philosophy_ 77 (9): 515-535
+2. M Davies and L Humberstone (1980) "Two Notions of Necessity," _Philosophical Studies_ 38 (1): 1-30
+3. J Levinson (1980) "What a Musical Work Is," _Journal Of Philosophy_ 77 (1): 5-28
+4. E Sober (1980) "Evolution, Population Thinking, and Essentialism," _Philosophy Of Science_ 47 (3): 350-383
+5. D Lewis (1980) "Veridical Hallucination and Prosthetic Vision," _Australasian Journal Of Philosophy_ 58 (3): 239-249
+6. RB Marcus (1980) "Moral Dilemmas and Consistency," _Journal Of Philosophy_ 77 (3): 121-136
+7. N Daniels (1980) "Reflective Equilibrium and Archimedean Points," _Canadian Journal Of Philosophy_ 10 (1): 83-103
+8. PS Churchland (1980) "A Perspective on Mind-Brain Research," _Journal Of Philosophy_ 77 (4): 185-207
+9. N Block (1980) "Are Absent Qualia Impossible," _Philosophical Review_ 89 (2): 257-274
+
+### Citation Count {-#sec-count-1980}
+
+```{r}
+#| label: tbl-citation-count-1980
+#| tbl-cap: Citation count for widely cited articles from 1980.
+
+year_cites <- rank_table_generator(1980)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1980}
+
+```{r}
+#| label: tbl-citation-rank-1980
+#| tbl-cap: Citation rank for widely cited articles from 1980.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1980}
+
+```{r}
+#| label: fig-citation-spaghetti-1980
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1980.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1980)
+```
+
+```{r}
+#| label: fig-citation-facet-1980
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1980.
+#| cache: TRUE
+
+rolling_facet_graph(1980)
+```
+
+\newpage
+
+
+## 1981 {#sec-s1981}
+
+### Widely Cited Articles {-}
+
+1. L Laudan (1981) "A Confutation of Convergent Realism," _Philosophy Of Science_ 48 (1): 19-49
+2. P Kitcher (1981) "Explanatory Unification," _Philosophy Of Science_ 48 (4): 507-531
+3. PM Churchland (1981) "Eliminative Materialism and the Propositional Attitudes," _Journal Of Philosophy_ 78 (2): 67-90
+4. R Dworkin (1981) "What is Equality? Part 2: Equality of Resources," _Philosophy & Public Affairs_ 10 (4): 283-345
+5. D Lewis (1981) "Causal Decision Theory," _Australasian Journal Of Philosophy_ 59 (1): 5-30
+6. P van Inwagen (1981) "The Doctrine of Arbitrary Undetached Parts," _Pacific Philosophical Quarterly_ 62 (2): 123-137
+7. RM Adams (1981) "Actualism and Thisness," _Synthese_ 49 (1): 3-41
+8. J Dupre (1981) "Natural Kinds and Biological Taxa," _Philosophical Review_ 90 (1): 66-90
+9. R Dworkin (1981) "What is Equality? Part 1: Equality of Welfare," _Philosophy & Public Affairs_ 10 (3): 185-246
+
+### Citation Count {-#sec-count-1981}
+
+```{r}
+#| label: tbl-citation-count-1981
+#| tbl-cap: Citation count for widely cited articles from 1981.
+
+year_cites <- rank_table_generator(1981)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1981}
+
+```{r}
+#| label: tbl-citation-rank-1981
+#| tbl-cap: Citation rank for widely cited articles from 1981.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1981}
+
+```{r}
+#| label: fig-citation-spaghetti-1981
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1981.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1981)
+```
+
+```{r}
+#| label: fig-citation-facet-1981
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1981.
+#| cache: TRUE
+
+rolling_facet_graph(1981)
+```
+
+\newpage
+
+
+## 1982 {#sec-s1982}
+
+### Widely Cited Articles {-}
+
+1. F Jackson (1982) "Epiphenomenal Qualia," _Philosophical Quarterly_ 32 (127): 127-136
+2. S Wolf (1982) "Moral Saints," _Journal Of Philosophy_ 79 (8): 419-439
+3. EW Prior, R Pargetter, and F Jackson (1982) "Three Theses About Dispositions," _American Philosophical Quarterly_ 19 (3): 251-257
+4. C Swoyer (1982) "The Nature of Natural Laws," _Australasian Journal Of Philosophy_ 60 (3): 203-223
+5. D Lewis (1982) "Logic for Equivocators," _Noûs_ 16 (3): 431-441
+6. J Haugeland (1982) "Weak Supervenience," _American Philosophical Quarterly_ 19 (1): 93-103
+7. J Kim (1982) "Psychophysical Supervenience," _Philosophical Studies_ 41 (1): 51-70
+8. A Gupta (1982) "Truth and Paradox," _Journal Of Philosophical Logic_ 11 (1): 1-60
+9. D Shapere (1982) "The Concept of Observation in Science and Philosophy," _Philosophy Of Science_ 49 (4): 485-525
+
+### Citation Count {-#sec-count-1982}
+
+```{r}
+#| label: tbl-citation-count-1982
+#| tbl-cap: Citation count for widely cited articles from 1982.
+
+year_cites <- rank_table_generator(1982)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1982}
+
+```{r}
+#| label: tbl-citation-rank-1982
+#| tbl-cap: Citation rank for widely cited articles from 1982.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1982}
+
+```{r}
+#| label: fig-citation-spaghetti-1982
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1982.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1982)
+```
+
+```{r}
+#| label: fig-citation-facet-1982
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1982.
+#| cache: TRUE
+
+rolling_facet_graph(1982)
+```
+
+\newpage
+
+
+## 1983 {#sec-s1983}
+
+### Widely Cited Articles {-}
+
+1. D Lewis (1983) "New Work for a Theory of Universals," _Australasian Journal Of Philosophy_ 61 (4): 343-377
+2. J Levine (1983) "Materialism and Qualia: The Explanatory Gap," _Pacific Philosophical Quarterly_ 64 (4): 354-361
+3. GS Kavka (1983) "The Toxin Puzzle," _Analysis_ 43 (1): 33-36
+4. CM Korsgaard (1983) "Two Distinctions in Goodness," _Philosophical Review_ 92 (2): 169-195
+5. R Brandom (1983) "Asserting," _Noûs_ 17 (4): 637-650
+6. H Kornblith (1983) "Justified Belief and Epistemically Responsible Action," _Philosophical Review_ 92 (1): 33-48
+7. E Eells and E Sober (1983) "Probabilistic Causality and the Question of Transitivity," _Philosophy Of Science_ 50 (1): 35-57
+8. PS Churchland and PM Churchland (1983) "Stalking The Wild Epistemic Engine," _Noûs_ 17 (1): 5-18
+9. PS Churchland (1983) "Consciousness the Transmutation of a Concept," _Pacific Philosophical Quarterly_ 64 (1): 80-95
+
+### Citation Count {-#sec-count-1983}
+
+```{r}
+#| label: tbl-citation-count-1983
+#| tbl-cap: Citation count for widely cited articles from 1983.
+
+year_cites <- rank_table_generator(1983)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1983}
+
+```{r}
+#| label: tbl-citation-rank-1983
+#| tbl-cap: Citation rank for widely cited articles from 1983.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1983}
+
+```{r}
+#| label: fig-citation-spaghetti-1983
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1983.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1983)
+```
+
+```{r}
+#| label: fig-citation-facet-1983
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1983.
+#| cache: TRUE
+
+rolling_facet_graph(1983)
+```
+
+\newpage
+
+
+## 1984 {#sec-s1984}
+
+### Widely Cited Articles {-}
+
+1. D Lewis (1984) "Putnam's Paradox," _Australasian Journal Of Philosophy_ 62 (3): 221-236
+2. BC van Fraassen (1984) "Belief and the Will," _Journal Of Philosophy_ 81 (5): 235-256
+3. P Railton (1984) "Alienation, Consequentialism, and the Demands of Morality," _Philosophy & Public Affairs_ 13 (2): 134-171
+4. G Boolos (1984) "To Be is To Be a Value of a Variable (Or To Be Some Values of Some Variables)," _Journal Of Philosophy_ 81 (8): 430-449
+5. J Kim (1984) "Concepts of Supervenience," _Philosophy And Phenomenological Research_ 45 (2): 153-176
+6. S Cohen (1984) "Justification and Truth," _Philosophical Studies_ 46 (3): 279-295
+7. J Fodor (1984) "Observation Reconsidered," _Philosophy Of Science_ 51 (1): 23-43
+8. J Kim (1984) "Epiphenomenal and Supervenient Causation," _Midwest Studies In Philosophy_ 9: 257-270
+9. P Kitcher (1984) "Species," _Philosophy Of Science_ 51 (2): 308-333
+
+### Citation Count {-#sec-count-1984}
+
+```{r}
+#| label: tbl-citation-count-1984
+#| tbl-cap: Citation count for widely cited articles from 1984.
+
+year_cites <- rank_table_generator(1984)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1984}
+
+```{r}
+#| label: tbl-citation-rank-1984
+#| tbl-cap: Citation rank for widely cited articles from 1984.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1984}
+
+```{r}
+#| label: fig-citation-spaghetti-1984
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1984.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1984)
+```
+
+```{r}
+#| label: fig-citation-facet-1984
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1984.
+#| cache: TRUE
+
+rolling_facet_graph(1984)
+```
+
+\newpage
+
+
+## 1985 {#sec-s1985}
+
+### Widely Cited Articles {-}
+
+1. R Feldman and E Conee (1985) "Evidentialism," _Philosophical Studies_ 48 (1): 15-34
+2. E McMullin (1985) "Galilean Idealization," _Studies In History And Philosophy Of Science_ 16 (3): 247-273
+3. J Hardwig (1985) "Epistemic Dependence," _Journal Of Philosophy_ 82 (7): 335-349
+4. V McGee (1985) "A Counterexample To Modus-Ponens," _Journal Of Philosophy_ 82 (9): 462-471
+5. G Boolos (1985) "Nominalist Platonism," _Philosophical Review_ 94 (3): 327-344
+6. RM Adams (1985) "Involuntary Sins," _Philosophical Review_ 94 (1): 3-31
+7. J Rawls (1985) "Justice as Fairness: Political Not Metaphysical," _Philosophy & Public Affairs_ 14 (3): 223-251
+8. PM Churchland (1985) "Reduction, Qualia, and the Direct Introspection of Brain States," _Journal Of Philosophy_ 82 (1): 8-28
+9. R Feldman (1985) "Reliability and Justification," _Monist_ 68 (2): 159-174
+
+### Citation Count {-#sec-count-1985}
+
+```{r}
+#| label: tbl-citation-count-1985
+#| tbl-cap: Citation count for widely cited articles from 1985.
+
+year_cites <- rank_table_generator(1985)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1985}
+
+```{r}
+#| label: tbl-citation-rank-1985
+#| tbl-cap: Citation rank for widely cited articles from 1985.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1985}
+
+```{r}
+#| label: fig-citation-spaghetti-1985
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1985.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1985)
+```
+
+```{r}
+#| label: fig-citation-facet-1985
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1985.
+#| cache: TRUE
+
+rolling_facet_graph(1985)
+```
+
+\newpage
+
+
+## 1986 {#sec-s1986}
+
+### Widely Cited Articles {-}
+
+1. P Railton (1986) "Moral Realism," _Philosophical Review_ 95 (2): 163-207
+2. T Burge (1986) "Individualism and Psychology," _Philosophical Review_ 95 (1): 3-45
+3. CM Korsgaard (1986) "Skepticism About Practical Reason," _Journal Of Philosophy_ 83 (1): 5-25
+4. A Baier (1986) "Trust and Antitrust," _Ethics_ 96 (2): 231-260
+5. DM Rosenthal (1986) "Two Concepts of Consciousness," _Philosophical Studies_ 49 (3): 329-359
+6. F Jackson and R Pargetter (1986) "Oughts, Options, and Actualism," _Philosophical Review_ 95 (2): 233-255
+7. N Block (1986) "Advertisement for a Semantics for Psychology," _Midwest Studies In Philosophy_ 10: 615-678
+8. RG Millikan (1986) "Thoughts Without Laws, Cognitive Science With Content," _Philosophical Review_ 95 (1): 47-80
+9. AL Brueckner (1986) "Brains in a Vat," _Journal Of Philosophy_ 83 (3): 148-167
+
+### Citation Count {-#sec-count-1986}
+
+```{r}
+#| label: tbl-citation-count-1986
+#| tbl-cap: Citation count for widely cited articles from 1986.
+
+year_cites <- rank_table_generator(1986)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1986}
+
+```{r}
+#| label: tbl-citation-rank-1986
+#| tbl-cap: Citation rank for widely cited articles from 1986.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1986}
+
+```{r}
+#| label: fig-citation-spaghetti-1986
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1986.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1986)
+```
+
+```{r}
+#| label: fig-citation-facet-1986
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1986.
+#| cache: TRUE
+
+rolling_facet_graph(1986)
+```
+
+\newpage
+
+
+## 1987 {#sec-s1987}
+
+### Widely Cited Articles {-}
+
+1. M Smith (1987) "The Humean Theory of Motivation," _Mind_ 96 (381): 36-61
+2. J Bigelow and R Pargetter (1987) "Functions," _Journal Of Philosophy_ 84 (4): 181-196
+3. H Frankfurt (1987) "Equality as a Moral Ideal," _Ethics_ 98 (1): 21-43
+4. J Earman and J Norton (1987) "What Price Spacetime Substantivalism: The Hole Story," _British Journal For The Philosophy Of Science_ 38 (4): 515-525
+5. DW Stampe (1987) "The Authority of Desire," _Philosophical Review_ 96 (3): 335-381
+6. M Gilbert (1987) "Modeling Collective Belief," _Synthese_ 73 (1): 185-204
+7. LS Temkin (1987) "Intransitivity and the Mere Addition Paradox," _Philosophy & Public Affairs_ 16 (2): 138-187
+8. L Laudan (1987) "Progress or Rationality: The Prospects for Normative Naturalism," _American Philosophical Quarterly_ 24 (1): 19-31
+9. T Nagel (1987) "Moral Conflict and Political Legitimacy," _Philosophy & Public Affairs_ 16 (3): 215-240
+
+### Citation Count {-#sec-count-1987}
+
+```{r}
+#| label: tbl-citation-count-1987
+#| tbl-cap: Citation count for widely cited articles from 1987.
+
+year_cites <- rank_table_generator(1987)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1987}
+
+```{r}
+#| label: tbl-citation-rank-1987
+#| tbl-cap: Citation rank for widely cited articles from 1987.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1987}
+
+```{r}
+#| label: fig-citation-spaghetti-1987
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1987.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1987)
+```
+
+```{r}
+#| label: fig-citation-facet-1987
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1987.
+#| cache: TRUE
+
+rolling_facet_graph(1987)
+```
+
+\newpage
+
+
+## 1988 {#sec-s1988}
+
+### Widely Cited Articles {-}
+
+1. T Burge (1988) "Individualism and Self-Knowledge," _Journal Of Philosophy_ 85 (11): 649-663
+2. J Bogen and J Woodward (1988) "Saving the Phenomena," _Philosophical Review_ 97 (3): 303-352
+3. A Grove (1988) "Two Modelings for Theory Change," _Journal Of Philosophical Logic_ 17 (2): 157-170
+4. K Sterelny and P Kitcher (1988) "The Return of the Gene," _Journal Of Philosophy_ 85 (7): 339-361
+5. S Kagan (1988) "The Additive Fallacy," _Ethics_ 99 (1): 5-31
+6. WP Alston (1988) "An Internalist Externalism," _Synthese_ 74 (3): 265-283
+7. DLM Baxter (1988) "Identity in the Loose and Popular Sense," _Mind_ 97 (388): 575-582
+8. F Jackson and P Pettit (1988) "Functionalism and Broad Content," _Mind_ 97 (387): 381-400
+9. J Rawls (1988) "The Priority of Right and Ideas of the Good," _Philosophy & Public Affairs_ 17 (4): 251-276
+
+### Citation Count {-#sec-count-1988}
+
+```{r}
+#| label: tbl-citation-count-1988
+#| tbl-cap: Citation count for widely cited articles from 1988.
+
+year_cites <- rank_table_generator(1988)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1988}
+
+```{r}
+#| label: tbl-citation-rank-1988
+#| tbl-cap: Citation rank for widely cited articles from 1988.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1988}
+
+```{r}
+#| label: fig-citation-spaghetti-1988
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1988.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1988)
+```
+
+```{r}
+#| label: fig-citation-facet-1988
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1988.
+#| cache: TRUE
+
+rolling_facet_graph(1988)
+```
+
+\newpage
+
+
+## 1989 {#sec-s1989}
+
+### Widely Cited Articles {-}
+
+1. GA Cohen (1989) "On the Currency of Egalitarian Justice," _Ethics_ 99 (4): 906-944
+2. RG Millikan (1989) "In Defense of Proper Functions," _Philosophy Of Science_ 56 (2): 288-302
+3. RG Millikan (1989) "Biosemantics," _Journal Of Philosophy_ 86 (6): 281-297
+4. PA Boghossian and JD Velleman (1989) "Color as a Secondary Quality," _Mind_ 98 (389): 81-103
+5. RJ Arneson (1989) "Equality and Equal-Opportunity for Welfare," _Philosophical Studies_ 56 (1): 77-93
+6. PA Boghossian (1989) "The Rule-Following Considerations," _Mind_ 5 98 (392): 507-549
+7. WS Quinn (1989) "Actions, Intentions, and Consequences: The Doctrine of Double Effect," _Philosophy & Public Affairs_ 18 (4): 334-351
+8. D Marquis (1989) "Why Abortion is Immoral," _Journal Of Philosophy_ 86 (4): 183-202
+9. M Crimmins and J Perry (1989) "The Prince and the Phone Booth: Reporting Puzzling Beliefs," _Journal Of Philosophy_ 86 (12): 685-711
+
+### Citation Count {-#sec-count-1989}
+
+```{r}
+#| label: tbl-citation-count-1989
+#| tbl-cap: Citation count for widely cited articles from 1989.
+
+year_cites <- rank_table_generator(1989)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1989}
+
+```{r}
+#| label: tbl-citation-rank-1989
+#| tbl-cap: Citation rank for widely cited articles from 1989.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1989}
+
+```{r}
+#| label: fig-citation-spaghetti-1989
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1989.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1989)
+```
+
+```{r}
+#| label: fig-citation-facet-1989
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1989.
+#| cache: TRUE
+
+rolling_facet_graph(1989)
+```
+
+\newpage
+
+
+## 1990 {#sec-s1990}
+
+### Widely Cited Articles {-}
+
+1. P Kitcher (1990) "The Division of Cognitive Labor," _Journal Of Philosophy_ 87 (1): 5-22
+2. F Jackson and P Pettit (1990) "Program Explanation: A General Perspective," _Analysis_ 50 (2): 107-117
+3. D Davidson (1990) "The Structure and Content of Truth," _Journal Of Philosophy_ 87 (6): 279-328
+4. G Rosen (1990) "Modal Fictionalism," _Mind_ 99 (395): 327-354
+5. T Crane and DH Mellor (1990) "There is No Question of Physicalism," _Mind_ 99 (394): 185-206
+6. J Vogel (1990) "Cartesian Skepticism and Inference To the Best Explanation," _Journal Of Philosophy_ 87 (11): 658-666
+7. J Dreier (1990) "Internalism and Speaker Relativism," _Ethics_ 101 (1): 6-26
+8. JW Kim (1990) "Supervenience as a Philosophical Concept," _Metaphilosophy_ 21 (1-2): 1-27
+9. M Tye (1990) "Vague Objects," _Mind_ 99 (396): 535-557
+
+### Citation Count {-#sec-count-1990}
+
+```{r}
+#| label: tbl-citation-count-1990
+#| tbl-cap: Citation count for widely cited articles from 1990.
+
+year_cites <- rank_table_generator(1990)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1990}
+
+```{r}
+#| label: tbl-citation-rank-1990
+#| tbl-cap: Citation rank for widely cited articles from 1990.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1990}
+
+```{r}
+#| label: fig-citation-spaghetti-1990
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1990.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1990)
+```
+
+```{r}
+#| label: fig-citation-facet-1990
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1990.
+#| cache: TRUE
+
+rolling_facet_graph(1990)
+```
+
+\newpage
+
+
+## 1991 {#sec-s1991}
+
+### Widely Cited Articles {-}
+
+1. K Neander (1991) "Functions as Selected Effects: The Conceptual Analysts Defense," _Philosophy Of Science_ 58 (2): 168-184
+2. DC Dennett (1991) "Real Patterns," _Journal Of Philosophy_ 88 (1): 27-51
+3. R Boyd (1991) "Realism, Antifoundationalism and the Enthusiasm for Natural Kinds," _Philosophical Studies_ 61 (1-2): 127-148
+4. F Jackson (1991) "Decision-Theoretic Consequentialism and the Nearest and Dearest Objection," _Ethics_ 101 (3): 461-482
+5. JJ Thomson (1991) "Self-Defense," _Philosophy & Public Affairs_ 20 (4): 283-310
+6. J Hardwig (1991) "The Role of Trust in Knowledge," _Journal Of Philosophy_ 88 (12): 693-708
+7. M McKinsey (1991) "Anti-Individualism and Privileged Access," _Analysis_ 51 (1): 9-16
+8. K Neander (1991) "The Teleological Notion of Function," _Australasian Journal Of Philosophy_ 69 (4): 454-468
+9. S Schiffer (1991) "Ceteris Paribus Laws," _Mind_ 100 (397): 1-17
+
+### Citation Count {-#sec-count-1991}
+
+```{r}
+#| label: tbl-citation-count-1991
+#| tbl-cap: Citation count for widely cited articles from 1991.
+
+year_cites <- rank_table_generator(1991)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1991}
+
+```{r}
+#| label: tbl-citation-rank-1991
+#| tbl-cap: Citation rank for widely cited articles from 1991.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1991}
+
+```{r}
+#| label: fig-citation-spaghetti-1991
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1991.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1991)
+```
+
+```{r}
+#| label: fig-citation-facet-1991
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1991.
+#| cache: TRUE
+
+rolling_facet_graph(1991)
+```
+
+\newpage
+
+
+## 1992 {#sec-s1992}
+
+### Widely Cited Articles {-}
+
+1. S Yablo (1992) "Mental Causation," _Philosophical Review_ 101 (2): 245-280
+2. M Johnston (1992) "How To Speak of the Colors," _Philosophical Studies_ 68 (3): 221-263
+3. K Derose (1992) "Contextualism and Knowledge Attributions," _Philosophy And Phenomenological Research_ 52 (4): 913-929
+4. JW Kim (1992) "Multiple Realization and the Metaphysics of Reduction," _Philosophy And Phenomenological Research_ 52 (1): 1-26
+5. ME Bratman (1992) "Shared Cooperative Activity," _Philosophical Review_ 101 (2): 327-340
+6. R Foley (1992) "The Epistemology of Belief and the Epistemology of Degrees of Belief," _American Philosophical Quarterly_ 29 (2): 111-124
+7. MB Burke (1992) "Copper Statues and Pieces of Copper: A Challenge To the Standard Account," _Analysis_ 52 (1): 12-17
+8. P Kitcher (1992) "The Naturalists Return," _Philosophical Review_ 101 (1): 53-114
+9. A Brueckner (1992) "What An Anti-Individualist Knows A Priori," _Analysis_ 52 (2): 111-118
+
+### Citation Count {-#sec-count-1992}
+
+```{r}
+#| label: tbl-citation-count-1992
+#| tbl-cap: Citation count for widely cited articles from 1992.
+
+year_cites <- rank_table_generator(1992)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1992}
+
+```{r}
+#| label: tbl-citation-rank-1992
+#| tbl-cap: Citation rank for widely cited articles from 1992.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1992}
+
+```{r}
+#| label: fig-citation-spaghetti-1992
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1992.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1992)
+```
+
+```{r}
+#| label: fig-citation-facet-1992
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1992.
+#| cache: TRUE
+
+rolling_facet_graph(1992)
+```
+
+\newpage
+
+
+## 1993 {#sec-s1993}
+
+### Widely Cited Articles {-}
+
+1. T Burge (1993) "Content Preservation," _Philosophical Review_ 102 (4): 457-488
+2. S Yablo (1993) "Is Conceivability a Guide To Possibility," _Philosophy And Phenomenological Research_ 53 (1): 1-42
+3. R Langton (1993) "Speech Acts and Unspeakable Acts," _Philosophy & Public Affairs_ 22 (4): 293-330
+4. S Yablo (1993) "Paradox Without Self-Reference," _Analysis_ 53 (4): 251-252
+5. ME Bratman (1993) "Shared Intention," _Ethics_ 104 (1): 97-113
+6. T Horgan (1993) "From Supervenience To Superdupervenience: Meeting the Demands of a Material World," _Mind_ 102 (408): 554-586
+7. J Dreier (1993) "Structures of Normative Theories," _Monist_ 76 (1): 22-40
+8. F Dretske (1993) "Conscious Experience," _Mind_ 102 (406): 263-283
+9. PE Griffiths (1993) "Functional Analysis and Proper Functions," _British Journal For The Philosophy Of Science_ 44 (3): 409-422
+
+### Citation Count {-#sec-count-1993}
+
+```{r}
+#| label: tbl-citation-count-1993
+#| tbl-cap: Citation count for widely cited articles from 1993.
+
+year_cites <- rank_table_generator(1993)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1993}
+
+```{r}
+#| label: tbl-citation-rank-1993
+#| tbl-cap: Citation rank for widely cited articles from 1993.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1993}
+
+```{r}
+#| label: fig-citation-spaghetti-1993
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1993.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1993)
+```
+
+```{r}
+#| label: fig-citation-facet-1993
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1993.
+#| cache: TRUE
+
+rolling_facet_graph(1993)
+```
+
+\newpage
+
+
+## 1994 {#sec-s1994}
+
+### Widely Cited Articles {-}
+
+1. D Lewis (1994) "Humean Supervenience Debugged," _Mind_ 103 (412): 473-490
+2. CB Martin (1994) "Dispositions and Conditionals," _Philosophical Quarterly_ 44 (174): 1-8
+3. H Field (1994) "Deflationist Views of Meaning and Content," _Mind_ 103 (411): 249-285
+4. M Forster and E Sober (1994) "How To Tell When Simpler, More Unified, or Less Ad-Hoc Theories Will Provide More Accurate Predictions," _British Journal For The Philosophy Of Science_ 45 (1): 1-35
+5. P Godfrey-Smith (1994) "A Modern History Theory of Functions," _Noûs_ 28 (3): 344-362
+6. G Strawson (1994) "The Impossibility of Moral Responsibility," _Philosophical Studies_ 75 (1-2): 5-24
+7. R Audi (1994) "Dispositional Beliefs and Dispositions To Believe," _Noûs_ 28 (4): 419-434
+8. R Holton (1994) "Deciding To Trust, Coming To Believe," _Australasian Journal Of Philosophy_ 72 (1): 63-76
+9. H Putnam (1994) "Sense, Nonsense, and the Senses: An Inquiry into the Powers of the Human Mind," _Journal Of Philosophy_ 91 (9): 445-465
+
+### Citation Count {-#sec-count-1994}
+
+```{r}
+#| label: tbl-citation-count-1994
+#| tbl-cap: Citation count for widely cited articles from 1994.
+
+year_cites <- rank_table_generator(1994)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1994}
+
+```{r}
+#| label: tbl-citation-rank-1994
+#| tbl-cap: Citation rank for widely cited articles from 1994.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1994}
+
+```{r}
+#| label: fig-citation-spaghetti-1994
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1994.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1994)
+```
+
+```{r}
+#| label: fig-citation-facet-1994
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1994.
+#| cache: TRUE
+
+rolling_facet_graph(1994)
+```
+
+\newpage
+
+
+## 1995 {#sec-s1995}
+
+### Widely Cited Articles {-}
+
+1. K Derose (1995) "Solving the Skeptical Problem," _Philosophical Review_ 104 (1): 1-52
+2. D Widerker (1995) "Libertarianism and Frankfurt's Attack on the Principle of Alternative Possibilities," _Philosophical Review_ 104 (2): 247-261
+3. DW Zimmerman (1995) "Theories of Masses and Problems of Constitution," _Philosophical Review_ 104 (1): 53-110
+4. T van Gelder (1995) "What Might Cognition Be, If Not Computation," _Journal Of Philosophy_ 92 (7): 345-381
+5. K Neander (1995) "Misrepresenting and Malfunctioning," _Philosophical Studies_ 79 (2): 109-141
+6. K Fine (1995) "The Logic of Essence," _Journal Of Philosophical Logic_ 24 (3): 241-273
+7. J McDowell (1995) "Knowledge and the Internal," _Philosophy And Phenomenological Research_ 55 (4): 877-893
+8. P Pietroski and G Rey (1995) "When Other Things Arent Equal: Saving Ceteris Paribus Laws From Vacuity," _British Journal For The Philosophy Of Science_ 46 (1): 81-110
+9. J Brown (1995) "The Incompatibility of Anti-Individualism and Privileged Access," _Analysis_ 55 (3): 149-156
+
+### Citation Count {-#sec-count-1995}
+
+```{r}
+#| label: tbl-citation-count-1995
+#| tbl-cap: Citation count for widely cited articles from 1995.
+
+year_cites <- rank_table_generator(1995)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1995}
+
+```{r}
+#| label: tbl-citation-rank-1995
+#| tbl-cap: Citation rank for widely cited articles from 1995.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1995}
+
+```{r}
+#| label: fig-citation-spaghetti-1995
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1995.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1995)
+```
+
+```{r}
+#| label: fig-citation-facet-1995
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1995.
+#| cache: TRUE
+
+rolling_facet_graph(1995)
+```
+
+\newpage
+
+
+## 1996 {#sec-s1996}
+
+### Widely Cited Articles {-}
+
+1. D Lewis (1996) "Elusive Knowledge," _Australasian Journal Of Philosophy_ 74 (4): 549-567
+2. T Williamson (1996) "Knowing and Asserting," _Philosophical Review_ 105 (4): 489-523
+3. F Veltman (1996) "Defaults in Update Semantics," _Journal Of Philosophical Logic_ 25 (3): 221-261
+4. K Jones (1996) "Trust as An Affective Attitude," _Ethics_ 107 (1): 4-25
+5. R Dworkin (1996) "Objectivity and Truth: You'd Better Believe It," _Philosophy & Public Affairs_ 25 (2): 87-139
+6. D Davidson (1996) "The Folly of Trying To Define Truth," _Journal Of Philosophy_ 93 (6): 263-278
+7. A Oliver (1996) "The Metaphysics of Properties," _Mind_ 105 (417): 1-80
+8. K Sterelny, KC Smith, and M Dickison (1996) "The Extended Replicator," _Biology & Philosophy_ 11 (3): 377-403
+9. T Sider (1996) "All the World's a Stage," _Australasian Journal Of Philosophy_ 74 (3): 433-453
+
+### Citation Count {-#sec-count-1996}
+
+```{r}
+#| label: tbl-citation-count-1996
+#| tbl-cap: Citation count for widely cited articles from 1996.
+
+year_cites <- rank_table_generator(1996)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1996}
+
+```{r}
+#| label: tbl-citation-rank-1996
+#| tbl-cap: Citation rank for widely cited articles from 1996.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1996}
+
+```{r}
+#| label: fig-citation-spaghetti-1996
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1996.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1996)
+```
+
+```{r}
+#| label: fig-citation-facet-1996
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1996.
+#| cache: TRUE
+
+rolling_facet_graph(1996)
+```
+
+\newpage
+
+
+## 1997 {#sec-s1997}
+
+### Widely Cited Articles {-}
+
+1. D Lewis (1997) "Finkish Dispositions," _Philosophical Quarterly_ 47 (187): 143-158
+2. D Parfit (1997) "Equality and Priority," _Ratio_ 10 (3): 202-221
+3. LR Baker (1997) "Why Constitution is Not Identity," _Journal Of Philosophy_ 94 (12): 599-621
+4. R Audi (1997) "The Place of Testimony in the Fabric of Knowledge and Justification," _American Philosophical Quarterly_ 34 (4): 405-422
+5. CS Hill (1997) "Imaginability, Conceivability, Possibility and the Mind-Body Problem," _Philosophical Studies_ 87 (1): 61-85
+6. MJ Zimmerman (1997) "Moral Responsibility and Ignorance," _Ethics_ 107 (3): 410-426
+7. RM Sainsbury (1997) "Easy Possibilities," _Philosophy And Phenomenological Research_ 57 (4): 907-919
+8. T Sider (1997) "Four Dimensionalism (Persistence Through Time, Doctrine of Temporal Parts, Perdurance)," _Philosophical Review_ 106 (2): 197-231
+9. T Burge (1997) "Interlocution, Perception, and Memory," _Philosophical Studies_ 86 (1): 21-47
+
+### Citation Count {-#sec-count-1997}
+
+```{r}
+#| label: tbl-citation-count-1997
+#| tbl-cap: Citation count for widely cited articles from 1997.
+
+year_cites <- rank_table_generator(1997)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1997}
+
+```{r}
+#| label: tbl-citation-rank-1997
+#| tbl-cap: Citation rank for widely cited articles from 1997.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1997}
+
+```{r}
+#| label: fig-citation-spaghetti-1997
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1997.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1997)
+```
+
+```{r}
+#| label: fig-citation-facet-1997
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1997.
+#| cache: TRUE
+
+rolling_facet_graph(1997)
+```
+
+\newpage
+
+
+## 1998 {#sec-s1998}
+
+### Widely Cited Articles {-}
+
+1. A Clark and D Chalmers (1998) "The Extended Mind," _Analysis_ 58 (1): 7-19
+2. JM Joyce (1998) "A Nonpragmatic Vindication of Probabilism," _Philosophy Of Science_ 65 (4): 575-603
+3. J Ladyman (1998) "What is Structural Realism?," _Studies In History And Philosophy Of Science_ 29 (3): 409-424
+4. A Bird (1998) "Dispositions and Antidotes," _Philosophical Quarterly_ 48 (191): 227-234
+5. N Salmon (1998) "Nonexistence," _Noûs_ 32 (3): 277-319
+6. R Langton and D Lewis (1998) "Defining 'Intrinsic'," _Philosophy And Phenomenological Research_ 58 (2): 333-345
+7. E Conee and R Feldman (1998) "The Generality Problem for Reliabilism," _Philosophical Studies_ 89 (1): 1-29
+8. JJ Thomson (1998) "The Statue and the Clay," _Noûs_ 32 (2): 149-173
+9. S Shoemaker (1998) "Causal and Metaphysical Necessity," _Pacific Philosophical Quarterly_ 79 (1): 59-77
+
+### Citation Count {-#sec-count-1998}
+
+```{r}
+#| label: tbl-citation-count-1998
+#| tbl-cap: Citation count for widely cited articles from 1998.
+
+year_cites <- rank_table_generator(1998)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1998}
+
+```{r}
+#| label: tbl-citation-rank-1998
+#| tbl-cap: Citation rank for widely cited articles from 1998.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1998}
+
+```{r}
+#| label: fig-citation-spaghetti-1998
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1998.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1998)
+```
+
+```{r}
+#| label: fig-citation-facet-1998
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1998.
+#| cache: TRUE
+
+rolling_facet_graph(1998)
+```
+
+\newpage
+
+
+## 1999 {#sec-s1999}
+
+### Widely Cited Articles {-}
+
+1. ES Anderson (1999) "What is the Point of Equality?," _Ethics_ 109 (2): 287-337
+2. J Broome (1999) "Normative Requirements," _Ratio_ 12 (4): 398-419
+3. N Block and R Stalnaker (1999) "Conceptual Analysis, Dualism, and the Explanatory Gap," _Philosophical Review_ 108 (1): 1-46
+4. J Kim (1999) "Making Sense of Emergence," _Philosophical Studies_ 95 (1-2): 3-36
+5. JD Velleman (1999) "Love as a Moral Emotion," _Ethics_ 109 (2): 338-374
+6. W Bechtel and J Mundale (1999) "Multiple Realizability Revisited: Linking Cognitive and Neural States," _Philosophy Of Science_ 66 (2): 175-207
+7. J Hyman (1999) "How Knowledge Works," _Philosophical Quarterly_ 49 (197): 433-451
+8. B Fitelson (1999) "The Plurality of Bayesian Measures of Confirmation and the Problem of Measure Sensitivity," _Philosophy Of Science_ 66 (3): 362-378
+9. T Shogenji (1999) "Is Coherence Truth Conducive?," _Analysis_ 59 (4): 338-345
+
+### Citation Count {-#sec-count-1999}
+
+```{r}
+#| label: tbl-citation-count-1999
+#| tbl-cap: Citation count for widely cited articles from 1999.
+
+year_cites <- rank_table_generator(1999)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-1999}
+
+```{r}
+#| label: tbl-citation-rank-1999
+#| tbl-cap: Citation rank for widely cited articles from 1999.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-1999}
+
+```{r}
+#| label: fig-citation-spaghetti-1999
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 1999.
+#| cache: TRUE
+
+rolling_spaghetti_graph(1999)
+```
+
+```{r}
+#| label: fig-citation-facet-1999
+#| fig-cap: Faceted version of @fig-citation-spaghetti-1999.
+#| cache: TRUE
+
+rolling_facet_graph(1999)
+```
+
+\newpage
+
+
+## 2000 {#sec-s2000}
+
+### Widely Cited Articles {-}
+
+1. P Machamer, L Darden, and CF Craver (2000) "Thinking About Mechanisms," _Philosophy Of Science_ 67 (1): 1-25
+2. J Pryor (2000) "The Skeptic and the Dogmatist," _Noûs_ 34 (4): 517-549
+3. S Haslanger (2000) "Gender and Race: (What) Are They? (What) Do We Want Them To Be?," _Noûs_ 34 (1): 31-55
+4. D Lewis (2000) "Causation as Influence," _Journal Of Philosophy_ 97 (4): 182-197
+5. J D'Arms and D Jacobson (2000) "The Moralistic Fallacy: On the 'Appropriateness' of Emotions," _Philosophy And Phenomenological Research_ 61 (1): 65-90
+6. H Douglas (2000) "Inductive Risk and Values in Science," _Philosophy Of Science_ 67 (4): 559-579
+7. A Elga (2000) "Self-Locating Belief and the 'Sleeping Beauty' Problem," _Analysis_ 60 (2): 143-147
+8. RG Heck (2000) "Nonconceptual Content and the "Space of Reasons"," _Philosophical Review_ 109 (4): 483-523
+9. LA Shapiro (2000) "Multiple Realizations," _Journal Of Philosophy_ 97 (12): 635-654
+
+### Citation Count {-#sec-count-2000}
+
+```{r}
+#| label: tbl-citation-count-2000
+#| tbl-cap: Citation count for widely cited articles from 2000.
+
+year_cites <- rank_table_generator(2000)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2000}
+
+```{r}
+#| label: tbl-citation-rank-2000
+#| tbl-cap: Citation rank for widely cited articles from 2000.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2000}
+
+```{r}
+#| label: fig-citation-spaghetti-2000
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2000.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2000)
+```
+
+```{r}
+#| label: fig-citation-facet-2000
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2000.
+#| cache: TRUE
+
+rolling_facet_graph(2000)
+```
+
+\newpage
+
+
+## 2001 {#sec-s2001}
+
+### Widely Cited Articles {-}
+
+1. J Stanley and T Williamson (2001) "Knowing How," _Journal Of Philosophy_ 98 (8): 411-444
+2. DJ Chalmers and F Jackson (2001) "Conceptual Analysis and Reductive Explanation," _Philosophical Review_ 110 (3): 315-360
+3. AI Goldman (2001) "Experts: Which Ones Should You Trust?," _Philosophy And Phenomenological Research_ 63 (1): 85-110
+4. C Hitchcock (2001) "The Intransitivity of Causation Revealed in Equations and Graphs," _Journal Of Philosophy_ 98 (6): 273-299
+5. P Rysiew (2001) "The Context-Sensitivity of Knowledge Attributions," _Noûs_ 35 (4): 477-514
+6. D Lewis (2001) "Truthmaking and Difference-Making," _Noûs_ 35 (4): 602-615
+7. CF Craver (2001) "Role Functions, Mechanisms, and Hierarchy," _Philosophy Of Science_ 68 (1): 53-74
+8. C Peacocke (2001) "Does Perception Have a Nonconceptual Content?," _Journal Of Philosophy_ 98 (5): 239-264
+9. P Hieronymi (2001) "Articulating An Uncompromising Forgiveness," _Philosophy And Phenomenological Research_ 62 (3): 529-555
+
+### Citation Count {-#sec-count-2001}
+
+```{r}
+#| label: tbl-citation-count-2001
+#| tbl-cap: Citation count for widely cited articles from 2001.
+
+year_cites <- rank_table_generator(2001)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2001}
+
+```{r}
+#| label: tbl-citation-rank-2001
+#| tbl-cap: Citation rank for widely cited articles from 2001.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2001}
+
+```{r}
+#| label: fig-citation-spaghetti-2001
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2001.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2001)
+```
+
+```{r}
+#| label: fig-citation-facet-2001
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2001.
+#| cache: TRUE
+
+rolling_facet_graph(2001)
+```
+
+\newpage
+
+
+## 2002 {#sec-s2002}
+
+### Widely Cited Articles {-}
+
+1. J Fantl and M McGrath (2002) "Evidence, Pragmatics, and Justification," _Philosophical Review_ 111 (1): 67-94
+2. S Glennan (2002) "Rethinking Mechanistic Explanation," _Philosophy Of Science_ 69 (3): 342-353
+3. S Cohen (2002) "Basic Knowledge and the Problem of Easy Knowledge," _Philosophy And Phenomenological Research_ 65 (2): 309-329
+4. R Chang (2002) "The Possibility of Parity," _Ethics_ 112 (4): 659-688
+5. C Wright (2002) "(Anti-)Sceptics Simple and Subtle: G.E. Moore and John McDowell," _Philosophy And Phenomenological Research_ 65 (2): 330-348
+6. E Schwitzgebel (2002) "A Phenomenal, Dispositional Account of Belief," _Noûs_ 36 (2): 249-275
+7. T Kelly (2002) "The Rationality of Belief and Some Other Propositional Attitudes," _Philosophical Studies_ 110 (2): 163-196
+8. M Matthen and A Ariew (2002) "Two Ways of Thinking About Fitness and Natural Selection," _Journal Of Philosophy_ 99 (2): 55-83
+9. DM Walsh, T Lewens, and A Ariew (2002) "The Trials of Life: Natural Selection and Random Drift," _Philosophy Of Science_ 69 (3): 452-473
+
+### Citation Count {-#sec-count-2002}
+
+```{r}
+#| label: tbl-citation-count-2002
+#| tbl-cap: Citation count for widely cited articles from 2002.
+
+year_cites <- rank_table_generator(2002)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2002}
+
+```{r}
+#| label: tbl-citation-rank-2002
+#| tbl-cap: Citation rank for widely cited articles from 2002.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2002}
+
+```{r}
+#| label: fig-citation-spaghetti-2002
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2002.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2002)
+```
+
+```{r}
+#| label: fig-citation-facet-2002
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2002.
+#| cache: TRUE
+
+rolling_facet_graph(2002)
+```
+
+\newpage
+
+
+## 2003 {#sec-s2003}
+
+### Widely Cited Articles {-}
+
+1. K Derose (2003) "Assertion, Knowledge, and Context," _Philosophical Review_ 111 (2): 167-203
+2. N Shah (2003) "How Truth Governs Belief," _Philosophical Review_ 112 (4): 447-482
+3. J Knobe (2003) "Intentional Action and Side Effects in Ordinary Language," _Analysis_ 63 (3): 190-194
+4. A Hájek (2003) "What Conditional Probability Could Not Be," _Synthese_ 137 (3): 273-323
+5. T Kelly (2003) "Epistemic Rationality as Instrumental Rationality: A Critique," _Philosophy And Phenomenological Research_ 66 (3): 612-640
+6. T Burge (2003) "Perceptual Entitlement," _Philosophy And Phenomenological Research_ 67 (3): 503-548
+7. J Schaffer (2003) "Is There a Fundamental Level?," _Noûs_ 37 (3): 498-517
+8. N Kolodny (2003) "Love as Valuing a Relationship," _Philosophical Review_ 112 (2): 135-189
+9. J MacFarlane (2003) "Future Contingents and Relative Truth," _Philosophical Quarterly_ 53 (212): 321-336
+
+### Citation Count {-#sec-count-2003}
+
+```{r}
+#| label: tbl-citation-count-2003
+#| tbl-cap: Citation count for widely cited articles from 2003.
+
+year_cites <- rank_table_generator(2003)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2003}
+
+```{r}
+#| label: tbl-citation-rank-2003
+#| tbl-cap: Citation rank for widely cited articles from 2003.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2003}
+
+```{r}
+#| label: fig-citation-spaghetti-2003
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2003.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2003)
+```
+
+```{r}
+#| label: fig-citation-facet-2003
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2003.
+#| cache: TRUE
+
+rolling_facet_graph(2003)
+```
+
+\newpage
+
+
+## 2004 {#sec-s2004}
+
+### Widely Cited Articles {-}
+
+1. W Rabinowicz and T Ronnow-Rasmussen (2004) "The Strike of the Demon: On Fitting Pro-Attitudes and Value," _Ethics_ 114 (3): 391-423
+2. C Travis (2004) "The Silence of the Senses," _Mind_ 113 (449): 57-94
+3. MGF Martin (2004) "The Limits of Self-Awareness," _Philosophical Studies_ 120 (1-3): 37-89
+4. D Pitt (2004) "The Phenomenology of Cognition, Or, What is It Like To Think That P?," _Philosophy And Phenomenological Research_ 69 (1): 1-36
+5. M Johnston (2004) "The Obscure Object of Hallucination," _Philosophical Studies_ 120 (1-3): 113-183
+6. RN Giere (2004) "How Models Are Used To Represent Reality," _Philosophy Of Science_ 71 (5): 742-752
+7. M Suarez (2004) "An Inferential Conception of Scientific Representation," _Philosophy Of Science_ 71 (5): 767-779
+8. DJ Chalmers (2004) "Epistemic Two-Dimensional Semantics," _Philosophical Studies_ 118 (1-2): 153-226
+9. J Schaffer (2004) "From Contextualism To Contrastivism," _Philosophical Studies_ 119 (1-2): 73-103
+
+### Citation Count {-#sec-count-2004}
+
+```{r}
+#| label: tbl-citation-count-2004
+#| tbl-cap: Citation count for widely cited articles from 2004.
+
+year_cites <- rank_table_generator(2004)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2004}
+
+```{r}
+#| label: tbl-citation-rank-2004
+#| tbl-cap: Citation rank for widely cited articles from 2004.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2004}
+
+```{r}
+#| label: fig-citation-spaghetti-2004
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2004.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2004)
+```
+
+```{r}
+#| label: fig-citation-facet-2004
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2004.
+#| cache: TRUE
+
+rolling_facet_graph(2004)
+```
+
+\newpage
+
+
+## 2005 {#sec-s2005}
+
+### Widely Cited Articles {-}
+
+1. N Kolodny (2005) "Why Be Rational?," _Mind_ 114 (455): 509-563
+2. Nishi Shah and J. David Velleman (2005) "Doxastic Deliberation," _Philosophical Review_ 114 (4): 497-534
+3. AM Smith (2005) "Responsibility for Attitudes: Activity and Passivity in Mental Life," _Ethics_ 115 (2): 236-271
+4. P Hieronymi (2005) "The Wrong Kind of Reason," _Journal Of Philosophy_ 102 (9): 437-457
+5. A Baker (2005) "Are There Genuine Mathematical Explanations of Physical Phenomena?," _Mind_ 114 (454): 223-238
+6. Matthew Weiner (2005) "Must We Know What We Say?," _Philosophical Review_ 114 (2): 227-251
+7. T Williamson (2005) "Contextualism, Subject-Sensitive Invariantism and Knowledge of Knowledge," _Philosophical Quarterly_ 55 (219): 213-235
+8. K Derose (2005) "The Ordinary Language Basis for Contextualism, and the New Invariantism," _Philosophical Quarterly_ 55 (219): 172-198
+9. E Nahmias, et al (2005) "Surveying Freedom: Folk Intuitions About Free Will and Moral Responsibility," _Philosophical Psychology_ 18 (5): 561-584
+
+### Citation Count {-#sec-count-2005}
+
+```{r}
+#| label: tbl-citation-count-2005
+#| tbl-cap: Citation count for widely cited articles from 2005.
+
+year_cites <- rank_table_generator(2005)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2005}
+
+```{r}
+#| label: tbl-citation-rank-2005
+#| tbl-cap: Citation rank for widely cited articles from 2005.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2005}
+
+```{r}
+#| label: fig-citation-spaghetti-2005
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2005.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2005)
+```
+
+```{r}
+#| label: fig-citation-facet-2005
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2005.
+#| cache: TRUE
+
+rolling_facet_graph(2005)
+```
+
+\newpage
+
+
+## 2006 {#sec-s2006}
+
+### Widely Cited Articles {-}
+
+1. S Street (2006) "A Darwinian Dilemma for Realist Theories of Value," _Philosophical Studies_ 27 (1): 109-166
+2. Hilary Greaves and David Wallace (2006) "Justifying Conditionalization: Conditionalization Maximizes Expected Epistemic Utility," _Mind_ 115 (459): 607-632
+3. Igor Douven (2006) "Assertion, Knowledge, and Rational Credibility," _Philosophical Review_ 115 (4): 449-485
+4. Roger White (2006) "Problems for Dogmatism," _Philosophical Studies_ 131 (3): 525-557
+5. Peter Godfrey-Smith (2006) "The Strategy of Model-Based Science," _Biology & Philosophy_ 21 (5): 725-740
+6. David Enoch (2006) "Agency, Shmagency: Why Normativity Won't Come From What is Constitutive of Action," _Philosophical Review_ 115 (2): 169-198
+7. Nishi Shah (2006) "A New Argument for Evidentialism," _Philosophical Quarterly_ 56 (225): 481-498
+8. Carl F. Craver (2006) "When Mechanistic Models Explain," _Synthese_ 153 (3): 355-376
+9. Joshua Knobe (2006) "The Concept of Intentional Action: A Case Study in the Uses of Folk Psychology," _Philosophical Studies_ 130 (2): 203-231
+
+### Citation Count {-#sec-count-2006}
+
+```{r}
+#| label: tbl-citation-count-2006
+#| tbl-cap: Citation count for widely cited articles from 2006.
+
+year_cites <- rank_table_generator(2006)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2006}
+
+```{r}
+#| label: tbl-citation-rank-2006
+#| tbl-cap: Citation rank for widely cited articles from 2006.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2006}
+
+```{r}
+#| label: fig-citation-spaghetti-2006
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2006.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2006)
+```
+
+```{r}
+#| label: fig-citation-facet-2006
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2006.
+#| cache: TRUE
+
+rolling_facet_graph(2006)
+```
+
+\newpage
+
+
+## 2007 {#sec-s2007}
+
+### Widely Cited Articles {-}
+
+1. Adam Elga (2007) "Reflection and Disagreement," _Noûs_ 41 (3): 478-502
+2. David Christensen (2007) "Epistemology of Disagreement: The Good News," _Philosophical Review_ 116 (2): 187-217
+3. Jennifer Lackey (2007) "Norms of Assertion," _Noûs_ 41 (4): 594-626
+4. Seth Yalcin (2007) "Epistemic Modals," _Mind_ 116 (464): 983-1026
+5. Michael Huemer (2007) "Compassionate Phenomenal Conservatism," _Philosophy And Phenomenological Research_ 74 (1): 30-55
+6. Michael Weisberg (2007) "Three Kinds of Idealization," _Journal Of Philosophy_ 104 (12): 639-659
+7. John MacFarlane (2007) "Relativism and Disagreement," _Philosophical Studies_ 132 (1): 17-31
+8. Andy Egan (2007) "Epistemic Modals, Relativism and Assertion," _Philosophical Studies_ 133 (1): 1-22
+9. Shaun Nichols and Joshua Knobe (2007) "Moral Responsibility and Determinism: The Cognitive Science of Folk Intuitions," _Noûs_ 41 (4): 663-685
+
+### Citation Count {-#sec-count-2007}
+
+```{r}
+#| label: tbl-citation-count-2007
+#| tbl-cap: Citation count for widely cited articles from 2007.
+
+year_cites <- rank_table_generator(2007)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2007}
+
+```{r}
+#| label: tbl-citation-rank-2007
+#| tbl-cap: Citation rank for widely cited articles from 2007.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2007}
+
+```{r}
+#| label: fig-citation-spaghetti-2007
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2007.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2007)
+```
+
+```{r}
+#| label: fig-citation-facet-2007
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2007.
+#| cache: TRUE
+
+rolling_facet_graph(2007)
+```
+
+\newpage
+
+
+## 2008 {#sec-s2008}
+
+### Widely Cited Articles {-}
+
+1. John Hawthorne and Jason Stanley (2008) "Knowledge and Action," _Journal Of Philosophy_ 5 (10): 571-590
+2. Tamar Szabo Gendler (2008) "Alief and Belief," _Journal Of Philosophy_ 5 (10): 634-663
+3. Eric Schwitzgebel (2008) "The Unreliability of Naive Introspection," _Philosophical Review_ 117 (2): 245-273
+4. Jessica Brown (2008) "Subject-Sensitive Invariantism and the Knowledge Norm for Practical Reasoning," _Noûs_ 42 (2): 167-189
+5. Scott Sturgeon (2008) "Reason and the Grain of Belief," _Noûs_ 42 (1): 139-165
+6. Stacey Swain, Joshua Alexander, and Jonathan M. Weinberg (2008) "The Instability of Philosophical Intuitions: Running Hot and Cold on Truetemp," _Philosophy And Phenomenological Research_ 76 (1): 138-155
+7. Pamela Hieronymi (2008) "Responsibility for Believing," _Synthese_ 161 (3): 357-373
+8. Michael Fara (2008) "Masked Abilities and Compatibilism," _Mind_ 117 (468): 843-865
+9. David Manley and Ryan Wasserman (2008) "On Linking Dispositions and Conditionals," _Mind_ 117 (465): 59-84
+
+### Citation Count {-#sec-count-2008}
+
+```{r}
+#| label: tbl-citation-count-2008
+#| tbl-cap: Citation count for widely cited articles from 2008.
+
+year_cites <- rank_table_generator(2008)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2008}
+
+```{r}
+#| label: tbl-citation-rank-2008
+#| tbl-cap: Citation rank for widely cited articles from 2008.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2008}
+
+```{r}
+#| label: fig-citation-spaghetti-2008
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2008.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2008)
+```
+
+```{r}
+#| label: fig-citation-facet-2008
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2008.
+#| cache: TRUE
+
+rolling_facet_graph(2008)
+```
+
+\newpage
+
+
+## 2009 {#sec-s2009}
+
+### Widely Cited Articles {-}
+
+1. Alison Hills (2009) "Moral Testimony and Moral Epistemology," _Ethics_ 120 (1): 94-127
+2. Alan Baker (2009) "Mathematical Explanation in Science," _British Journal For The Philosophy Of Science_ 60 (3): 611-633
+3. John MacFarlane (2009) "Nonindexical Contextualism," _Synthese_ 166 (2): 231-250
+4. Alex Byrne (2009) "Experience and Content," _Philosophical Quarterly_ 59 (236): 429-451
+5. Jonathan Schaffer (2009) "Spacetime the One Substance," _Philosophical Studies_ 145 (1): 131-148
+6. Jonathan Cohen and Craig Callender (2009) "A Better Best System Account of Lawhood," _Philosophical Studies_ 145 (1): 1-34
+7. Tim Bayne (2009) "Perception and the Reach of Phenomenal Content," _Philosophical Quarterly_ 59 (236): 385-404
+8. Christian List and Peter Menzies (2009) "Nonreductive Physicalism and the Limits of the Exclusion Principle," _Journal Of Philosophy_ 106 (9): 475-502
+9. Mark Schroeder (2009) "Means-End Coherence, Stringency, and Subjective Reasons," _Philosophical Studies_ 143 (2): 223-248
+
+### Citation Count {-#sec-count-2009}
+
+```{r}
+#| label: tbl-citation-count-2009
+#| tbl-cap: Citation count for widely cited articles from 2009.
+
+year_cites <- rank_table_generator(2009)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2009}
+
+```{r}
+#| label: tbl-citation-rank-2009
+#| tbl-cap: Citation rank for widely cited articles from 2009.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2009}
+
+```{r}
+#| label: fig-citation-spaghetti-2009
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2009.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2009)
+```
+
+```{r}
+#| label: fig-citation-facet-2009
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2009.
+#| cache: TRUE
+
+rolling_facet_graph(2009)
+```
+
+\newpage
+
+
+## 2010 {#sec-s2010}
+
+### Widely Cited Articles {-}
+
+1. David Christensen (2010) "Higher-Order Evidence," _Philosophy And Phenomenological Research_ 81 (1): 185-215
+2. Niko Kolodny and John MacFarlane (2010) "Ifs and Oughts," _Journal Of Philosophy_ 107 (3): 115-143
+3. James Woodward (2010) "Causation in Biology: Stability, Specificity, and the Choice of Levels of Explanation," _Biology & Philosophy_ 25 (3): 287-318
+4. Maria Lasonen Aarnio (2010) "Unreasonable Knowledge," _Philosophical Perspectives_ 24 (1): 1-21
+5. Eric Schwitzgebel (2010) "Acting Contrary To Our Professed Beliefs or the Gulf Between Occurrent Judgment and Dispositional Belief," _Pacific Philosophical Quarterly_ 91 (4): 531-553
+6. Julia Markovits (2010) "Acting for the Right Reasons," _Philosophical Review_ 119 (2): 201-242
+7. Kevin J. S. Zollman (2010) "The Epistemic Benefit of Transient Diversity," _Erkenntnis_ 72 (1): 17-35
+8. Jonathan Schaffer (2010) "The Least Discerning and Most Promiscuous Truthmaker," _Philosophical Quarterly_ 60 (239): 307-324
+9. Jonathan M. Weinberg, et al (2010) "Are Philosophers Expert Intuiters?," _Philosophical Psychology_ (3): 331-355
+
+### Citation Count {-#sec-count-2010}
+
+```{r}
+#| label: tbl-citation-count-2010
+#| tbl-cap: Citation count for widely cited articles from 2010.
+
+year_cites <- rank_table_generator(2010)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2010}
+
+```{r}
+#| label: tbl-citation-rank-2010
+#| tbl-cap: Citation rank for widely cited articles from 2010.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2010}
+
+```{r}
+#| label: fig-citation-spaghetti-2010
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2010.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2010)
+```
+
+```{r}
+#| label: fig-citation-facet-2010
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2010.
+#| cache: TRUE
+
+rolling_facet_graph(2010)
+```
+
+\newpage
+
+
+## 2011 {#sec-s2011}
+
+### Widely Cited Articles {-}
+
+1. Kristie Dotson (2011) "Tracking Epistemic Violence, Tracking Practices of Silencing," _Hypatia_ 26 (2): 236-257
+2. Karen Bennett (2011) "By Our Bootstraps," _Philosophical Perspectives_ 25 (1): 27-41
+3. David J. Chalmers (2011) "Verbal Disputes," _Philosophical Review_ 120 (4): 515-566
+4. David Michael Kaplan and Carl F. Craver (2011) "The Explanatory Force of Dynamical and Mathematical Models in Neuroscience: A Mechanistic Perspective," _Philosophy Of Science_ 78 (4): 601-627
+5. C. S. Jenkins (2011) "Is Metaphysical Dependence Irreflexive?," _Monist_ 94 (2): 267-276
+6. David Christensen (2011) "Disagreement, Question-Begging and Epistemic Self-Criticism," _Philosophers Imprint_ 11 (6):
+7. Guy Kahane (2011) "Evolutionary Debunking Arguments," _Noûs_ 45 (1): 103-125
+8. Timothy Williamson (2011) "Philosophical Expertise and the Burden of Proof," _Metaphilosophy_ 42 (3): 215-229
+9. Timothy Sundell (2011) "Disagreements About Taste," _Philosophical Studies_ 155 (2): 267-288
+
+### Citation Count {-#sec-count-2011}
+
+```{r}
+#| label: tbl-citation-count-2011
+#| tbl-cap: Citation count for widely cited articles from 2011.
+
+year_cites <- rank_table_generator(2011)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2011}
+
+```{r}
+#| label: tbl-citation-rank-2011
+#| tbl-cap: Citation rank for widely cited articles from 2011.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2011}
+
+```{r}
+#| label: fig-citation-spaghetti-2011
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2011.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2011)
+```
+
+```{r}
+#| label: fig-citation-facet-2011
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2011.
+#| cache: TRUE
+
+rolling_facet_graph(2011)
+```
+
+\newpage
+
+
+## 2012 {#sec-s2012}
+
+### Widely Cited Articles {-}
+
+1. Duncan Pritchard (2012) "Anti-Luck Virtue Epistemology," _Journal Of Philosophy_ 109 (3): 247-279
+2. Paul Audi (2012) "Grounding: Toward a Theory of the In-Virtue-Of Relation," _Journal Of Philosophy_ 109 (12): 685-711
+3. Fiona Macpherson (2012) "Cognitive Penetration of Colour Experience: Rethinking the Issue in Light of An Indirect Mechanism," _Philosophy And Phenomenological Research_ 84 (1): 24-62
+4. Pablo Cobreros, et al (2012) "Tolerant, Classical, Strict," _Journal Of Philosophical Logic_ 41 (2): 347-385
+5. Barry Loewer (2012) "Two Accounts of Laws and Time," _Philosophical Studies_ 60 (1): 115-137
+6. Gaile Pohlhaus Jr. (2012) "Relational Knowing and Epistemic Injustice: Toward a Theory of Willful Hermeneutical Ignorance," _Hypatia_ 27 (4): 715-735
+7. Eric Schwitzgebel and Fiery Cushman (2012) "Expertise in Moral Reasoning? Order Effects on Moral Judgment in Professional Philosophers and Non-Philosophers," _Mind & Language_ 27 (2): 135-153
+8. Susanna Siegel (2012) "Cognitive Penetrability and Perceptual Justification," _Noûs_ 46 (2): 201-222
+9. Declan Smithies (2012) "The Normative Role of Knowledge," _Noûs_ 46 (2): 265-288
+
+### Citation Count {-#sec-count-2012}
+
+```{r}
+#| label: tbl-citation-count-2012
+#| tbl-cap: Citation count for widely cited articles from 2012.
+
+year_cites <- rank_table_generator(2012)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2012}
+
+```{r}
+#| label: tbl-citation-rank-2012
+#| tbl-cap: Citation rank for widely cited articles from 2012.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2012}
+
+```{r}
+#| label: fig-citation-spaghetti-2012
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2012.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2012)
+```
+
+```{r}
+#| label: fig-citation-facet-2012
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2012.
+#| cache: TRUE
+
+rolling_facet_graph(2012)
+```
+
+\newpage
+
+
+## 2013 {#sec-s2013}
+
+### Widely Cited Articles {-}
+
+1. David Plunkett and Tim Sundell (2013) "Disagreement and the Semantics of Normative and Evaluative Terms," _Philosophers Imprint_ 13 (23): 1-37
+2. Louis deRosset (2013) "Grounding Explanations," _Philosophers Imprint_ 13 (7): 1-26
+3. Jane Friedman (2013) "Suspended Judgment," _Philosophical Studies_ 162 (2): 165-181
+4. Kelly Trogdon (2013) "Grounding: Necessary or Contingent?," _Pacific Philosophical Quarterly_ 94 (4): 465-485
+5. David Ripley (2013) "Paradoxes and Failures of Cut," _Australasian Journal Of Philosophy_ 91 (1): 139-164
+6. Marc Lange (2013) "What Makes a Scientific Explanation Distinctively Mathematical?," _British Journal For The Philosophy Of Science_ 64 (3): 485-511
+7. Pablo Cobreros, et al (2013) "Reaching Transparent Truth," _Mind_ 122 (488): 841-866
+8. Selim Berker (2013) "Epistemic Teleology and the Separateness of Propositions," _Philosophical Review_ 122 (3): 337-393
+9. Alberto Giubilini and Francesca Minerva (2013) "After-Birth Abortion: Why Should the Baby Live?," _Journal Of Medical Ethics_ 39 (5): 261-263
+
+### Citation Count {-#sec-count-2013}
+
+```{r}
+#| label: tbl-citation-count-2013
+#| tbl-cap: Citation count for widely cited articles from 2013.
+
+year_cites <- rank_table_generator(2013)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2013}
+
+```{r}
+#| label: tbl-citation-rank-2013
+#| tbl-cap: Citation rank for widely cited articles from 2013.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2013}
+
+```{r}
+#| label: fig-citation-spaghetti-2013
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2013.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2013)
+```
+
+```{r}
+#| label: fig-citation-facet-2013
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2013.
+#| cache: TRUE
+
+rolling_facet_graph(2013)
+```
+
+\newpage
+
+
+## 2014 {#sec-s2014}
+
+### Widely Cited Articles {-}
+
+1. Jessica M. Wilson (2014) "No Work for a Theory of Grounding," _Inquiry_ 57 (5-6): 535-579
+2. Shamik Dasgupta (2014) "The Possibility of Physicalism," _Journal Of Philosophy_ 0): 557-592
+3. Miriam Schoenfield (2014) "Permission To Believe: Why Permissivism is True and What It Tells Us About Irrelevant Influences on Belief," _Noûs_ 48 (2): 193-218
+4. Jacob Ross and Mark Schroeder (2014) "Belief, Credence, and Pragmatic Encroachment," _Philosophy And Phenomenological Research_ 88 (2): 259-288
+5. Sophie Horowitz (2014) "Epistemic Akrasia," _Noûs_ 48 (4): 718-744
+6. Maria Lasonen-Aarnio (2014) "Higher-Order Evidence and the Limits of Defeat," _Philosophy And Phenomenological Research_ 88 (2): 314-345
+7. Lara Buchak (2014) "Belief, Credence, and Norms," _Philosophical Studies_ 169 (2): 285-311
+8. Stephan Leuenberger (2014) "Grounding and Necessity," _Inquiry_ (2): 151-174
+9. Robert W. Batterman and Collin C. Rice (2014) "Minimal Model Explanations," _Philosophy Of Science_ 81 (3): 349-376
+
+### Citation Count {-#sec-count-2014}
+
+```{r}
+#| label: tbl-citation-count-2014
+#| tbl-cap: Citation count for widely cited articles from 2014.
+
+year_cites <- rank_table_generator(2014)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2014}
+
+```{r}
+#| label: tbl-citation-rank-2014
+#| tbl-cap: Citation rank for widely cited articles from 2014.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2014}
+
+```{r}
+#| label: fig-citation-spaghetti-2014
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2014.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2014)
+```
+
+```{r}
+#| label: fig-citation-facet-2014
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2014.
+#| cache: TRUE
+
+rolling_facet_graph(2014)
+```
+
+\newpage
+
+
+## 2015 {#sec-s2015}
+
+### Widely Cited Articles {-}
+
+1. Alexander Skiles (2015) "Against Grounding Necessitarianism," _Erkenntnis_ 80 (4): 717-751
+2. Michael J. Raven (2015) "Ground," _Philosophy Compass_ 10 (5): 322-333
+3. Collin Rice (2015) "Moving Beyond Causes: Optimality Models and Scientific Explanation," _Noûs_ 49 (3): 589-615
+4. David Plunkett (2015) "Which Concepts Should We Use?: Metalinguistic Negotiations and the Methodology of Philosophy," _Inquiry_ 58 (7-8): 828-874
+5. Kit Fine (2015) "Unified Foundations for Essence and Ground," _Journal Of The American Philosophical Association_ 1 (2):
+6. James Woodward (2015) "Interventionism and Causal Exclusion," _Philosophy And Phenomenological Research_ 91 (2): 303-347
+7. Jonathan Schaffer (2015) "What Not To Multiply Without Necessity," _Australasian Journal Of Philosophy_ 93 (4): 644-664
+8. John Bengson (2015) "The Intellectual Given," _Mind_ 124 (495): 707-760
+9. William J. Fitzpatrick (2015) "Debunking Evolutionary Debunking of Ethical Realism," _Philosophical Studies_ 72 (4): 883-904
+
+### Citation Count {-#sec-count-2015}
+
+```{r}
+#| label: tbl-citation-count-2015
+#| tbl-cap: Citation count for widely cited articles from 2015.
+
+year_cites <- rank_table_generator(2015)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2015}
+
+```{r}
+#| label: tbl-citation-rank-2015
+#| tbl-cap: Citation rank for widely cited articles from 2015.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2015}
+
+```{r}
+#| label: fig-citation-spaghetti-2015
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2015.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2015)
+```
+
+```{r}
+#| label: fig-citation-facet-2015
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2015.
+#| cache: TRUE
+
+rolling_facet_graph(2015)
+```
+
+\newpage
+
+
+## 2016 {#sec-s2016}
+
+### Widely Cited Articles {-}
+
+1. NA
+0. 
+
+### Citation Count {-#sec-count-2016}
+
+```{r}
+#| label: tbl-citation-count-2016
+#| tbl-cap: Citation count for widely cited articles from 2016.
+
+year_cites <- rank_table_generator(2016)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2016}
+
+```{r}
+#| label: tbl-citation-rank-2016
+#| tbl-cap: Citation rank for widely cited articles from 2016.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2016}
+
+```{r}
+#| label: fig-citation-spaghetti-2016
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2016.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2016)
+```
+
+```{r}
+#| label: fig-citation-facet-2016
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2016.
+#| cache: TRUE
+
+rolling_facet_graph(2016)
+```
+
+\newpage
+
+
+## 2017 {#sec-s2017}
+
+### Widely Cited Articles {-}
+
+1. NA
+0. 
+
+### Citation Count {-#sec-count-2017}
+
+```{r}
+#| label: tbl-citation-count-2017
+#| tbl-cap: Citation count for widely cited articles from 2017.
+
+year_cites <- rank_table_generator(2017)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2017}
+
+```{r}
+#| label: tbl-citation-rank-2017
+#| tbl-cap: Citation rank for widely cited articles from 2017.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2017}
+
+```{r}
+#| label: fig-citation-spaghetti-2017
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2017.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2017)
+```
+
+```{r}
+#| label: fig-citation-facet-2017
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2017.
+#| cache: TRUE
+
+rolling_facet_graph(2017)
+```
+
+\newpage
+
+
+## 2018 {#sec-s2018}
+
+### Widely Cited Articles {-}
+
+1. NA
+0. 
+
+### Citation Count {-#sec-count-2018}
+
+```{r}
+#| label: tbl-citation-count-2018
+#| tbl-cap: Citation count for widely cited articles from 2018.
+
+year_cites <- rank_table_generator(2018)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2018}
+
+```{r}
+#| label: tbl-citation-rank-2018
+#| tbl-cap: Citation rank for widely cited articles from 2018.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2018}
+
+```{r}
+#| label: fig-citation-spaghetti-2018
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2018.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2018)
+```
+
+```{r}
+#| label: fig-citation-facet-2018
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2018.
+#| cache: TRUE
+
+rolling_facet_graph(2018)
+```
+
+\newpage
+
+
+## 2019 {#sec-s2019}
+
+### Widely Cited Articles {-}
+
+1. NA
+0. 
+
+### Citation Count {-#sec-count-2019}
+
+```{r}
+#| label: tbl-citation-count-2019
+#| tbl-cap: Citation count for widely cited articles from 2019.
+
+year_cites <- rank_table_generator(2019)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2019}
+
+```{r}
+#| label: tbl-citation-rank-2019
+#| tbl-cap: Citation rank for widely cited articles from 2019.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2019}
+
+```{r}
+#| label: fig-citation-spaghetti-2019
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2019.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2019)
+```
+
+```{r}
+#| label: fig-citation-facet-2019
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2019.
+#| cache: TRUE
+
+rolling_facet_graph(2019)
+```
+
+\newpage
+
+
+## 2020 {#sec-s2020}
+
+### Widely Cited Articles {-}
+
+1. NA
+0. 
+
+### Citation Count {-#sec-count-2020}
+
+```{r}
+#| label: tbl-citation-count-2020
+#| tbl-cap: Citation count for widely cited articles from 2020.
+
+year_cites <- rank_table_generator(2020)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2020}
+
+```{r}
+#| label: tbl-citation-rank-2020
+#| tbl-cap: Citation rank for widely cited articles from 2020.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2020}
+
+```{r}
+#| label: fig-citation-spaghetti-2020
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2020.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2020)
+```
+
+```{r}
+#| label: fig-citation-facet-2020
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2020.
+#| cache: TRUE
+
+rolling_facet_graph(2020)
+```
+
+\newpage
+
+
+## 2021 {#sec-s2021}
+
+### Widely Cited Articles {-}
+
+1. NA
+0. 
+
+### Citation Count {-#sec-count-2021}
+
+```{r}
+#| label: tbl-citation-count-2021
+#| tbl-cap: Citation count for widely cited articles from 2021.
+
+year_cites <- rank_table_generator(2021)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2021}
+
+```{r}
+#| label: tbl-citation-rank-2021
+#| tbl-cap: Citation rank for widely cited articles from 2021.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2021}
+
+```{r}
+#| label: fig-citation-spaghetti-2021
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2021.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2021)
+```
+
+```{r}
+#| label: fig-citation-facet-2021
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2021.
+#| cache: TRUE
+
+rolling_facet_graph(2021)
+```
+
+\newpage
+
+
+## 2022 {#sec-s2022}
+
+### Widely Cited Articles {-}
+
+1. NA
+0. 
+
+### Citation Count {-#sec-count-2022}
+
+```{r}
+#| label: tbl-citation-count-2022
+#| tbl-cap: Citation count for widely cited articles from 2022.
+
+year_cites <- rank_table_generator(2022)
+kable(select(year_cites, Article, All = Citations, Early = `Early Citations`, Late = `Late Citations`))
+```
+
+
+### Citation Rank {-#sec-rank-2022}
+
+```{r}
+#| label: tbl-citation-rank-2022
+#| tbl-cap: Citation rank for widely cited articles from 2022.
+
+kable(select(year_cites, Article, Overall = `Citation Rank`, Early = `Early Rank`, Late = `Late Rank`))
+```
+
+
+### Citation Trends {-#sec-trends-2022}
+
+```{r}
+#| label: fig-citation-spaghetti-2022
+#| fig-cap: Rolling five year average of citation frequency for widely cited articles from 2022.
+#| cache: TRUE
+
+rolling_spaghetti_graph(2022)
+```
+
+```{r}
+#| label: fig-citation-facet-2022
+#| fig-cap: Faceted version of @fig-citation-spaghetti-2022.
+#| cache: TRUE
+
+rolling_facet_graph(2022)
+```
+
+\newpage
+

@@ -56,7 +56,7 @@ for(year in (1976:2015)){
 }
 
 long_cites <- citation_tibble |>
-  filter(old %in% long_article_ids$old, new_year >=1980, new_year <= 2022) |>
+  filter(old %in% long_article_ids$old, old_year >= 1986, new_year >=1990, new_year <= 2022) |>
   ungroup() |>
   group_by(old, new_year) |>
   tally(name="year_cites") |>
@@ -77,7 +77,7 @@ cos_graph <- ggplot(cos_years, aes(x = year1, y = year2, value = cos_value)) +
 cos_graph
 
 cos_delayed <- cos_years |>
-  filter(year2 >= 1985, year1 >= year2 - 1, year1 <= year2 - 1) |>
+  filter(year2 >= 1995, year1 >= year2 - 5, year1 <= year2 - 1) |>
   group_by(year2) |>
   summarise(past_sim_score = mean(cos_value)) |>
   ggplot(aes(x = year2, y = past_sim_score)) + theme_minimal() + geom_smooth() + geom_line()
