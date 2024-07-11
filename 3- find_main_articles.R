@@ -32,7 +32,7 @@ citation_tibble <- philo_cite_with_jp |>
 
 main_article_ids <- c()
 
-for(year in (1956:2015)){
+for(year in (1956:2022)){
   
   topper <- 1
   all_cited <- tribble(~old, ~n)
@@ -62,7 +62,12 @@ for(year in (1956:2015)){
       slice_max(n, n=topper)
     
     all_cited <- bind_rows(most_cited, recent_cited, orig_cited) |>
-      distinct(old, .keep_all = TRUE) |>
+      distinct(old)
+    
+    all_cited <- citation_tibble |>
+      right_join(all_cited, by = "old") |>
+      group_by(old) |>
+      tally() |>
       mutate(old_year = year)
     
     topper <- topper + 1
@@ -70,9 +75,12 @@ for(year in (1956:2015)){
   main_article_ids <- bind_rows(
     main_article_ids,
     slice_max(all_cited, n, n=9, with_ties = FALSE)
-  ) |>
-    filter(n >= 20)
+  ) 
 }
+
+main_article_ids <- main_article_ids |>
+  ungroup() |>
+  slice_max(n, n = 603, with_ties = FALSE)
 
 name_fix <- c(
   'Bonjour' = 'BonJour',
