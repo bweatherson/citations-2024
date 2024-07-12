@@ -81,27 +81,7 @@ for(year in (1956:2020)){
 main_article_ids <- main_article_ids |>
   ungroup() 
 
-name_fix <- c(
-  'Bonjour' = 'BonJour',
-  'Mcdowell' = 'McDowell',
-  'Mcmullin' = 'McMullin',
-  'Mcgee' = 'McGee',
-  'Wedgewood' = 'Wedgwood',
-  'Mcginn' = 'McGinn',
-  'Mcgrath' = 'McGrath',
-  'Mckinsey' = 'McKinsey',
-  'Macfarlane' = 'MacFarlane',
-  'Castaneda' = 'Castañeda',
-  'Hajek' = 'Hájek',
-  'Vaninwagen' = 'van Inwagen',
-  'Vanfraassen' = 'van Fraassen',
-  'D\'arms' = 'D\'Arms',
-  'Godfreysmith' = 'Godfrey-Smith',
-  'Vangelder' = 'van Gelder',
-  'Derosset' = 'deRosset'
-)
-
 main_bib <- main_article_ids |>
   left_join(philo_bib_fix, by = c("old" = "id")) |>
   select(-longcite) |>
-  filter(n >= 34 | old == "WOS:A1963CGU1500001")
+  filter(n >= 34)

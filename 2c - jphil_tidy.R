@@ -69,7 +69,7 @@ target_articles <- articles |>
   mutate(auth = author) |>
   select(-author) |>
   select(-vol, -iss, -fpage, -authall) |>
-  select(end_of_longcite, id, shortcite, longcite, year, journal, art_title, auth, firstauth, everything()) |>
+  select(end_of_longcite, id, shortcite, year, journal, art_title, auth, firstauth, everything()) |>
   mutate(graph_auth = case_when(
     auth == "Hector-Neri Castaneda" ~ "H-N Castaneda",
     auth == "Judith Jarvis Thomson" ~ "JJ Thomson",
