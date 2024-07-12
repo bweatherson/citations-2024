@@ -79,8 +79,7 @@ for(year in (1956:2020)){
 }
 
 main_article_ids <- main_article_ids |>
-  ungroup() |>
-  slice_max(n, n = 603, with_ties = FALSE)
+  ungroup() 
 
 name_fix <- c(
   'Bonjour' = 'BonJour',
@@ -104,4 +103,5 @@ name_fix <- c(
 
 main_bib <- main_article_ids |>
   left_join(philo_bib_fix, by = c("old" = "id")) |>
-  select(-longcite)
+  select(-longcite) |>
+  filter(n >= 34 | old == "WOS:A1963CGU1500001")

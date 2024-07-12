@@ -173,7 +173,10 @@ jphil_to_phil <- jphil_to_phil |>
   inner_join(target_articles, by = "join_code") |>
   rename(refs = id) |>
   rename(id = newid) |>
-  select(id, refs)
+  select(id, refs) |>
+  mutate(short_auth = case_when(
+    id == "10.2307_2024902" ~ "Lewis, Counterparts",
+    TRUE ~ short_auth))
 
 load("philo_cite_fix.RData")
 

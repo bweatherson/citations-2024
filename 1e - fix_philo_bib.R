@@ -1,5 +1,7 @@
 # Fix philo_bib
 
+require(tidyverse)
+
 load("philo_bib_unlisted.RData")
 load("philo_cite.RData")
 
