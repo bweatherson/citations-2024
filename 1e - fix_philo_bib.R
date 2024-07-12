@@ -1,10 +1,7 @@
 # Fix philo_bib
 
-load("philo_bib.RData")
+load("philo_bib_unlisted.RData")
 load("philo_cite.RData")
-
-philo_bib_fix_1 <- philo_bib |>
-  filter(journal != "Nous" | !str_detect(longcite, "Suppl") | str_detect(longcite, "Sp. Iss."))
 
 authadjust <- function(x){
   paste0(str_extract(x, '\\b[^,]+$'), " ", str_to_title(str_extract(x,".+(?=,)")))
@@ -13,7 +10,6 @@ authadjust <- function(x){
 authadjust_short <- function(x){
   str_to_title(str_extract(x,".+(?=,)"))
 }
-
 
 name_fix <- c(
   'Bonjour' = 'BonJour',
@@ -38,22 +34,6 @@ name_fix <- c(
 )
 
 philo_bib_fix_2 <- philo_bib_fix_1 |>
-  ungroup() |>
-  rowwise() |>
-  mutate(graph_auth =  case_when(author[1] == "Pohlhaus, Gaile, Jr." ~ "Gaile Pohlhaus Jr.",
-                                 author[1] == "STALNAKE.RC" ~ "R Stalnaker",
-                                 length(author) == 1 ~ authadjust(author[1]),
-                                 length(author) == 2 ~ paste0(authadjust(author[1]), " and ", authadjust(author[2])),
-                                 length(author) == 3 ~ paste0(authadjust(author[1]), ", ", authadjust(author[2]), ", and ", authadjust(author[3])),
-                                 TRUE ~ paste0(authadjust(author[1]), ", et al"))) |>
-  mutate(short_auth = case_when(author[1] == "Pohlhaus, Gaile, Jr." ~ "Pohlhaus Jr.",
-                                author[1] == "STALNAKE.RC" ~ "Stalnaker",
-                                length(author) == 1 ~ authadjust_short(author[1]),
-                                length(author) == 2 ~ paste0(authadjust_short(author[1]), " and ", authadjust_short(author[2])),
-                                TRUE ~ paste0(authadjust_short(author[1]), " et al"))) |>
-  ungroup()
-
-philo_bib_fix_2 <- philo_bib_fix_2 |>
   mutate(graph_auth = str_replace_all(
     graph_auth,
     name_fix
@@ -214,6 +194,8 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
         'Things Arent Equal' = 'Things Aren\'t Equal',
         'Four Dimensionalism (Persistence Through Time, Doctrine of Temporal Parts, Perdurance)' = 'Four Dimensionalism',
         'the \"Space of Reasons\"' = 'the \'Space of Reasons\'',
+        'Blame? a Paradigm' = 'Blame? A Paradigm',
+        'Microbiomes? a Comparison' = 'Microbiomes? A Comparison',
         ' - ' = ': ',
         ': a' = ': A',
         ': the' = ': The',
@@ -239,8 +221,8 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
     art_title == "Scorekeeping In A Language Game" ~ "Lewis, Scorekeeping",
     art_title == "Functions As Selected Effects: The Conceptual Analysts Defense" ~ "Neander, Selected",
     art_title == "The Teleological Notion Of Function" ~ "Neander, Teleological",
-    art_title == "A Causal Calculus Part 1" ~ "Good Pt. 1",
-    art_title == "A Causal Calculus Part 2" ~ "Good Pt. 2",
+#    art_title == "A Causal Calculus Part 1" ~ "Good Pt. 1",
+#    art_title == "A Causal Calculus Part 2" ~ "Good Pt. 2",
     art_title == "Truth and Meaning" ~ "Davidson, Truth",
     art_title == "Causal Relations" ~ "Davidson, Causal",
     art_title == "Possibility" ~ "Hacking, Possibility",
@@ -313,7 +295,12 @@ philo_bib_fix_5 <- philo_bib_fix_4 |>
                                     end_of_longcite))
 
 philo_bib_fix_6 <- philo_bib_fix_5 |>
-  select(id, journal, year, art_title, end_of_longcite, auth, firstauth, graph_auth, short_auth, graph_cite, full_cite, cite_without_year, shortcite)
+  select(id, journal, year, art_title, end_of_longcite, auth, firstauth, graph_auth, short_auth, graph_cite, full_cite, cite_without_year, shortcite) |>
+  mutate(journal = case_when(
+    journal == "Philosophers Imprint" ~ "Philosophers' Imprint",
+    TRUE ~ journal
+  ))
+
 
 philo_bib_fix <- philo_bib_fix_6
 save(philo_bib_fix, file = "philo_bib_fix.RData")

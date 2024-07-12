@@ -32,7 +32,7 @@ citation_tibble <- philo_cite_with_jp |>
 
 main_article_ids <- c()
 
-for(year in (1956:2022)){
+for(year in (1956:2020)){
   
   topper <- 1
   all_cited <- tribble(~old, ~n)
