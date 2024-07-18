@@ -7,21 +7,14 @@ load("philo_cite_with_jp.RData")
 
 start_year <- 1956
 end_year <- 2022
-window <- 0
-min_data <- 8
+window <- 5
+min_data <- 2
+avail_cap <- 10
 
 active_philo_bib <- philo_bib_fix |>
   filter(year >= start_year, year <= end_year)
 
 active_philo_cite <- philo_cite_with_jp 
-
-authadjust <- function(x){
-  paste0(str_extract(x, '\\b[^,]+$'), " ", str_to_title(str_extract(x,".+(?=,)")))
-}
-
-authadjust_short <- function(x){
-  str_to_title(str_extract(x,".+(?=,)"))
-}
 
 article_years <- active_philo_bib |>
   as_tibble() |>
@@ -37,7 +30,7 @@ citation_tibble <- active_philo_cite |>
   filter(old_year >= start_year,
          new_year <= end_year,
          old_year >= start_year,
-         new_year <= end_year)
+         new_year <= end_year) 
 
 # Now a tibble of how many times articles in year x are cited in year y
 
@@ -45,7 +38,15 @@ year_in_year_out <- citation_tibble |>
   group_by(old_year, new_year) |>
   tally(name = "citations") |> # Now add the 'missing' pairs
   ungroup() |>
-  complete(old_year, new_year, fill = list(citations = 0))
+  complete(old_year, new_year, fill = list(citations = 0)) 
+
+citations_in_available_year <- year_in_year_out |>
+  mutate(age = new_year - old_year) |>
+  filter(age >= 1, age <= 14) |>
+  group_by(new_year) |>
+  summarise(avail_citations = sum(citations)) 
+    
+  
 
 # Tibble for raw citation age
 
@@ -60,8 +61,8 @@ raw_age_plot <- raw_age_tibble |>
   xlab('Age of citation') +
   ylab('Number of citations')
 
-# There are enough at 0 for me to count same year as 'available'. I wasn't initially going to do that, but it's 2.2%
-# Now how many articles published each year, and the cumulative total, i.e., the 'available' articles
+# I'm going to count the 'available' articles as those published between 1 and 14 years before the citing year
+# Those are all the years with 10,000 or more cites in the database
 
 # Tibble for number of publications each year, and cumulative, or 'available'
 
@@ -69,13 +70,19 @@ articles_per_year <- active_philo_bib |>
   rename(old_year = year) |>
   group_by(old_year) |>
   tally(name = "articles") |>
-  mutate(available = cumsum(articles))
+  mutate(available = slide_dbl(articles, sum, .before = avail_cap))
 
 articles_per_year_plot <- articles_per_year |>
   ggplot(aes(x = old_year, y = articles)) +
   geom_point() +
   xlab(element_blank()) +
   ylab("Number of indexed articles")
+
+available_plot <- articles_per_year |>
+  ggplot(aes(x = old_year, y = available)) +
+  geom_point() +
+  xlab(element_blank()) +
+  ylab("Number of available indexed articles")
 
 # Same for citations
 
@@ -89,11 +96,34 @@ citations_per_year_plot <- citations_per_year |>
   xlab(element_blank()) +
   ylab("Citations to indexed articles")
 
+# Outbound citations
+
+outbound_citations <- left_join(
+  articles_per_year,
+  citations_per_year,
+  by = c("old_year" = "new_year")
+) |>
+  mutate(outbound_rate = citations/articles) |>
+  mutate(outbound = round(outbound_rate, 2))
+
+outbound_citations_plot <- outbound_citations |>
+  ggplot(aes(x = old_year, y = outbound)) +
+  geom_point() +
+  xlab(element_blank()) +
+  ylab("Outbound citations per indexed articles")
+
+
+
+
+
 # Citations per available article
 
 citation_rate_per_year <- citations_per_year |>
   left_join(articles_per_year, by = c("new_year" = "old_year")) |>
-  mutate(mean_cites = citations/available)
+  filter(available > 0) |>
+  left_join(citations_in_available_year, by = "new_year") |>
+  filter(new_year != 1956) |>
+  mutate(mean_cites = avail_citations/available)
 
 citation_rate_per_year_plot <- citation_rate_per_year |>
   ggplot(aes(x = new_year, y = mean_cites)) +
@@ -182,15 +212,53 @@ most_citing_articles <- article_times_citing |>
   select(Article = full_cite, `Articles Cited` = citations)
 
 # Compare mean per year to mean per available
+# Complicating this a little to compare only citations to *other* years
+# So cite-ratio has a numerator and denominator
+# Numerator is cites(old_year, new_year) / pubs(old_year)
+# Denominator is (avail_citations(new_year) - cites(old_year, new_year)) / (avail_articles - pubs(old_year))
+# Important to restrict to avail_citations, or else you get some weird effects
+# Latter is tricky because need to exclude iff it is in available window
+
+# Citations between years
+ct_sum <- citation_tibble |>
+  group_by(old_year, new_year) |>
+  tally(name = "citations") |>
+  ungroup()
+
+# All citations in a year
+ct_all <- citation_tibble |>
+  group_by(new_year) |>
+  tally(name = "all_citations")
+
+# Calculating other citations
+ct_other <- ct_sum |>
+  left_join(ct_all, by = "new_year") |>
+  mutate(other_citations = all_citations - citations)
 
 age_effect_tibble <- year_in_year_out |>
   filter(old_year >= start_year, old_year <= end_year + 1 - min_data - window, new_year >= start_year) |>
-  left_join(articles_per_year, by = "old_year") |>
-  select(-available) |>
-  left_join(select(
-    citation_rate_per_year, new_year, mean_cites
-  ), by = "new_year") |>
-  mutate(cite_ratio = citations/(articles * mean_cites))
+  filter(new_year >= old_year + window) |>
+  left_join(select(articles_per_year, old_year, articles), by = "old_year") |>
+  left_join(select(articles_per_year, old_year, available), by = c("new_year" = "old_year")) |>
+  left_join(ct_all, by = "new_year") |> 
+  mutate(age = new_year - old_year) |>
+  mutate(available = case_when(
+    age >= 0 & age <= avail_cap ~ available - articles,
+    TRUE ~ available
+  )) |>
+  filter(available > 0) |>
+  left_join(citations_in_available_year, by = "new_year") |>
+  filter(avail_citations - citations > 0) |>
+  mutate(N1 = citations) |>
+  mutate(N2 = articles) |>
+  mutate(D1 = case_when(
+    age >= 0 & age <= avail_cap ~ avail_citations - citations,
+    TRUE ~ avail_citations
+  )) |>
+  mutate(D2 = available) |>
+  mutate(numerator = N1/N2) |>
+  mutate(denominator = D1/D2) |>
+  mutate(cite_ratio = numerator/denominator)
 
 age_effect_tibble_plot <- age_effect_tibble |>
   filter(old_year >= start_year, old_year <= end_year + 1 - min_data - window, new_year >= start_year) |>
@@ -210,7 +278,7 @@ age_effect_grouped <- age_effect_tibble |>
   summarise(mean_effect = mean(cite_ratio))
 
 age_effect_tibble_adj <- age_effect_tibble |>
-  filter(new_year >= old_year) |>
+  filter(new_year >= old_year + window) |>
   filter(new_year <= old_year + old_year + end_year - start_year + 1 - window - min_data) |>
   mutate(the_age = new_year - old_year) |>
   left_join(age_effect_grouped, by = "the_age")
@@ -223,7 +291,7 @@ age_effect_grouped_plot <- age_effect_grouped |>
 
 age_effect_everything_plot <- age_effect_tibble_adj |>
   ggplot(aes(x = the_age, y = cite_ratio, color = as.factor(old_year))) +
-  geom_jitter(aes(size=(old_year==1973 | old_year ==1985)), alpha = 1) +
+  geom_jitter(aes(size=(old_year==1973 | old_year == 1985), shape = (old_year==1973)), alpha = 1) +
   scale_size_manual(values=c(0.3,3)) +
   xlab("Age of cited articles") +
   ylab("Citation ratio") +
@@ -231,7 +299,7 @@ age_effect_everything_plot <- age_effect_tibble_adj |>
   theme(legend.position = "none")
 
 year_by_year_with_effect <- year_in_year_out |>
-  filter(new_year >= old_year) |>
+  filter(new_year >= old_year + window) |>
   filter(new_year <= old_year + end_year - start_year + 1 - window - min_data) |>
   filter(old_year >= start_year, old_year <= end_year - window - min_data + 1, new_year >= start_year + min_data) |>
   mutate(the_age = new_year - old_year) |>
@@ -311,5 +379,3 @@ year_to_mean <- function(x){
     geom_point() +
     geom_line(aes(x = age, y = age_effect))
 }
-
-
