@@ -39,7 +39,18 @@ citation_tibble <- active_philo_cite |>
   filter(old_year >= start_year,
          new_year <= end_year,
          old_year >= start_year,
-         new_year <= end_year) 
+         new_year <= end_year) |>
+  add_count(old, name = "cite_count")
+
+# This next bit is to filter out highly cited articles
+# Obviously not for main text, but useful for some purposes
+
+max_cites <- 39
+active_philo_bib <- active_philo_bib |>
+  anti_join(filter(citation_tibble, cite_count > max_cites), by = c("id" = "old"))
+
+citation_tibble <- citation_tibble |>
+  filter(cite_count <= max_cites)
 
 # Now a tibble of how many times articles in year x are cited in year y
 
@@ -54,8 +65,12 @@ citations_in_typical_year <- year_in_year_out |>
   filter(age >= typical_low, age <= typical_high) |>
   group_by(new_year) |>
   summarise(typical_citations = sum(citations)) 
-    
-  
+
+citations_in_available_year <- year_in_year_out |>
+  mutate(age = new_year - old_year) |>
+  filter(age >= 0) |>
+  group_by(new_year) |>
+  summarise(available_citations = sum(citations)) 
 
 # Tibble for raw citation age
 
@@ -102,15 +117,26 @@ typical_plot <- articles_per_year |>
 
 # Same for citations
 
-citations_per_year <- citation_tibble |>
+all_citations_per_year <- citation_tibble |>
   group_by(new_year) |>
   tally(name = "citations") 
 
-citations_per_year_plot <- citations_per_year |>
+all_citations_per_year_plot <- all_citations_per_year |>
   ggplot(aes(x = new_year, y = citations)) +
   geom_point() +
   xlab(element_blank()) +
   ylab("Citations to indexed articles")
+
+available_citations_per_year <- citation_tibble |>
+  filter(new_year >= old_year) |>
+  group_by(new_year) |>
+  tally(name = "citations") 
+
+available_citations_per_year_plot <- available_citations_per_year |>
+  ggplot(aes(x = new_year, y = citations)) +
+  geom_point() +
+  xlab(element_blank()) +
+  ylab("Citations to available indexed articles")
 
 typical_citations_per_year <- citation_tibble |>
   filter(new_year >= old_year + typical_low, new_year <= old_year + typical_high) |>
@@ -128,7 +154,7 @@ typical_citations_per_year_plot <- typical_citations_per_year |>
 
 outbound_citations <- left_join(
   articles_per_year,
-  citations_per_year,
+  all_citations_per_year,
   by = c("old_year" = "new_year")
 ) |>
   mutate(outbound_rate = citations/articles) |>
@@ -146,13 +172,25 @@ outbound_citations_plot <- outbound_citations |>
 
 # Citations per typical article
 
-citation_rate_per_year <- citations_per_year |>
+available_citation_rate_per_year <- available_citations_per_year |>
   left_join(articles_per_year, by = c("new_year" = "old_year")) |>
-  filter(new_year >= start_year + typical_high) |>
+  #filter(new_year >= start_year + typical_high) |>
+  left_join(citations_in_available_year, by = "new_year") |>
+  mutate(mean_cites = available_citations/available)
+
+available_citation_rate_per_year_plot <- available_citation_rate_per_year |>
+  ggplot(aes(x = new_year, y = mean_cites)) +
+  geom_point() +
+  xlab(element_blank()) +
+  ylab("Annual citation rate of available articles.")
+
+typical_citation_rate_per_year <- typical_citations_per_year |>
+  left_join(articles_per_year, by = c("new_year" = "old_year")) |>
+  #filter(new_year >= start_year + typical_high) |>
   left_join(citations_in_typical_year, by = "new_year") |>
   mutate(mean_cites = typical_citations/typical_articles)
 
-citation_rate_per_year_plot <- citation_rate_per_year |>
+typical_citation_rate_per_year_plot <- typical_citation_rate_per_year |>
   ggplot(aes(x = new_year, y = mean_cites)) +
   geom_point() +
   xlab(element_blank()) +
@@ -262,14 +300,36 @@ age_effect_tibble <- year_in_year_out |>
   mutate(cite_ratio = (citations/articles)/(typical_citations/typical_articles))
 
 age_effect_tibble_plot <- age_effect_tibble |>
-  filter(old_year >= start_year, old_year <= end_year + 1 - min_data, new_year >= start_year) |>
+  filter(old_year >= start_year + 1, old_year <= end_year - min_data, new_year >= start_year) |>
   ggplot(aes(x = new_year, y = cite_ratio)) +
-  geom_point(size = 0.3) +
+  geom_point(size = 0.25) +
   facet_wrap(~old_year, ncol = 6) +
   xlab(element_blank()) +
   ylab(element_blank()) +
   theme(axis.text = element_text(size = 10),
         strip.text = element_text(size = 12))
+
+max_ratio_finder <- age_effect_tibble |>
+  group_by(old_year) |>
+  summarise(maxrat = max(cite_ratio)) |>
+  ggplot(aes(x = old_year, y = maxrat)) +
+  geom_point() +
+  xlab(element_blank()) +
+  ylab("Maximum citation ratio") +
+  ylim(c(0, 3))
+
+age_at_max_ratio <- age_effect_tibble |>
+  group_by(old_year) |>
+  filter(cite_ratio == max(cite_ratio))
+
+age_at_max_ratio_plot <- age_at_max_ratio |>
+  filter(old_year <= 2016, old_year >= start_year + typical_high - 2) |>
+  ggplot(aes(x = old_year, y = age)) +
+  geom_point() +
+  xlab(element_blank()) + 
+  ylab("Age at maximum citation ratio") +
+  scale_y_continuous(limits = c(0, 14), breaks = 1:4 * 4)
+           
 
 age_effect_grouped <- age_effect_tibble |>
   filter(new_year >= old_year) |>
@@ -290,14 +350,16 @@ age_effect_grouped_plot <- age_effect_grouped |>
   ylab("Mean citation ratio")
 
 age_effect_everything_plot <- age_effect_tibble_adj |>
-  filter(old_year >= 1970) |>
+  filter(old_year >= 1975, old_year != 1973) |>
   ggplot(aes(x = age, y = cite_ratio, color = as.factor(old_year))) +
-  geom_jitter(aes(size=(old_year==2000 | old_year == 1985), shape = (old_year==2000)), alpha = 1) +
-#  geom_jitter(aes(size=(old_year %in% c(1978, 1980, 1985, 1987)), alpha = 1)) +
-  scale_size_manual(values=c(0.3,2)) +
+  geom_jitter(size = 0.5, alpha = 0.7) +
+  # geom_jitter(aes(size=(old_year==2008 | old_year == 1985), shape = (old_year==2008)), alpha = 1) +
+  #  geom_jitter(aes(size=(old_year %in% c(1978, 1980, 1985, 1987)), alpha = 1)) +
+  # scale_size_manual(values=c(0.3,2)) +
   xlab("Age of cited articles") +
   ylab("Citation ratio") +
   geom_line(aes(x = age, y = mean_effect), color = "black") +
+  geom_point(aes(x = age, y = mean_effect), color = "black", size = 0.4) +
   theme(legend.position = "none")
 
 year_by_year_with_effect <- year_in_year_out |>
@@ -326,68 +388,19 @@ year_by_year_average <- year_by_year_with_effect |>
 
 year_by_year_average_plot <- year_by_year_average |>
   ggplot(aes(x = old_year, y = mean_surplus)) +
-  geom_point()
+  geom_point()  +
+  geom_smooth() +
+  xlab(element_blank()) +
+  ylab("Mean annual citations above average") +
+  scale_y_continuous(labels = scales::percent)
 
-year_by_year_average_plot + geom_smooth()
+# year_by_year_average_plot + geom_smooth()
 
-# yiyo_extended <- year_in_year_out |>
-#   filter(old_year >= start_year,
-#          new_year >= start_year + min_data,
-#          old_year <= end_year + 1 - min_data - window,
-#          new_year >= old_year + window) |> # First remove years where we don't have min_data years to compare, or min_data data points
-#   mutate(age = new_year - old_year) |>
-#   filter(age <= end_year - start_year + 1 - min_data - window) |> # Again, only looking at things where there are min_data comparisons
-#   left_join(
-#     select(
-#       articles_per_year, 
-#       old_year,
-#       articles),
-#     by = "old_year" 
-#   ) |> # How many articles were published in old_year  
-#   left_join(
-#     select(
-#       articles_per_year, 
-#       old_year,
-#       available),
-#     by = c("new_year" = "old_year")
-#   ) |> # How many articles were out at new_year
-#   ungroup() |>
-#   group_by(new_year) |>
-#   mutate(cites_that_year = sum(citations)) |>
-#   ungroup() |>
-#   mutate(old_year_cite_rate = citations/articles) |>
-#   mutate(other_cite_rate = (cites_that_year - citations)/(available-articles)) |>
-#   mutate(surplus = old_year_cite_rate/other_cite_rate) |>
-#   group_by(age) |>
-#   mutate(age_effect = mean(surplus)) |>
-#   ungroup() |>
-#   mutate(age_adj_surplus = surplus - age_effect)
-# 
-# yiyo_summary <- yiyo_extended |>
-#   ungroup() |>
-#   group_by(old_year) |>
-#   summarise(cohort_effect = mean(age_adj_surplus)) |>
-#   arrange(cohort_effect)
-# 
-# yiyo_summary_plot <- yiyo_summary |> 
-#   ggplot(aes(x = old_year, y = cohort_effect)) + 
-#   geom_point() +
-#   xlab(element_blank()) +
-#   ylab("Mean adjusted citation rate")
-# 
-# year_to_mean <- function(x){
-#   yiyo_extended |>
-#     filter(old_year == x) |>
-#     ggplot(aes(x = age, y = surplus)) + 
-#     geom_point() +
-#     geom_line(aes(x = age, y = age_effect))
-# }
-
-effect_by_age <- function(early, late){
+effect_by_age_average <- function(early, late){
   age_effect_tibble |>
     filter(age >= early, age <= late) |>
-#    add_count(old_year, name = "data_points") |>
-#    filter(data_points >= min_data) |>
+    #    add_count(old_year, name = "data_points") |>
+    #    filter(data_points >= min_data) |>
     group_by(old_year) |>
     summarise(mean_ratio = mean(cite_ratio)) |>
     ggplot(aes(x = old_year, y = mean_ratio)) +
@@ -400,8 +413,24 @@ effect_by_age <- function(early, late){
       TRUE ~ paste0("Mean citation ratio from ages ",early," to ",late)))
 }
 
-age_effect_tibble |>
-  filter(age>= 0, age <= 19) |>
-  ggplot(aes(x = old_year, y = cite_ratio)) +
-  geom_point() + geom_smooth() +
-  facet_wrap(~age, ncol = 4)
+effect_by_age_facet <- function(early, late){age_effect_tibble |>
+    filter(age>= early, age <= late) |>
+    ggplot(aes(x = old_year, y = cite_ratio)) +
+    geom_point() + geom_smooth() +
+    facet_wrap(~age, ncol = 4)
+}
+
+year_to_mean_plot <- function(the_year){
+  age_effect_tibble_adj |>
+    filter(old_year == the_year) |>
+    ggplot(aes(x = age, y = cite_ratio)) +
+    geom_point(size = 2, alpha = 1, color = hcl(h = (the_year-1975)*(360/43)+15, l = 65, c = 100)) +
+    # geom_jitter(aes(size=(old_year==2008 | old_year == 1985), shape = (old_year==2008)), alpha = 1) +
+    #  geom_jitter(aes(size=(old_year %in% c(1978, 1980, 1985, 1987)), alpha = 1)) +
+    # scale_size_manual(values=c(0.3,2)) +
+    xlab("Age of cited articles") +
+    ylab("Citation ratio") +
+    geom_line(aes(x = age, y = mean_effect), color = "black") +
+    geom_point(aes(x = age, y = mean_effect), color = "black", size = 0.4) +
+    theme(legend.position = "none")
+}
