@@ -42,15 +42,15 @@ citation_tibble <- active_philo_cite |>
          new_year <= end_year) |>
   add_count(old, name = "cite_count")
 
-# This next bit is to filter out highly cited articles
-# Obviously not for main text, but useful for some purposes
-
-max_cites <- 39
-active_philo_bib <- active_philo_bib |>
-  anti_join(filter(citation_tibble, cite_count > max_cites), by = c("id" = "old"))
-
-citation_tibble <- citation_tibble |>
-  filter(cite_count <= max_cites)
+# # This next bit is to filter out highly cited articles
+# # Obviously not for main text, but useful for some purposes
+# 
+# max_cites <- 39
+# active_philo_bib <- active_philo_bib |>
+#   anti_join(filter(citation_tibble, cite_count > max_cites), by = c("id" = "old"))
+# 
+# citation_tibble <- citation_tibble |>
+#   filter(cite_count <= max_cites)
 
 # Now a tibble of how many times articles in year x are cited in year y
 
