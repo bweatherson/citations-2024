@@ -1,4 +1,6 @@
 require(tidyverse)
+
+
 bibtexgen <- philo_bib_fix |>
   left_join(
     select(
@@ -14,7 +16,12 @@ bibtexgen <- philo_bib_fix |>
   filter(grepl("[0-9]$", PAGES)) |>
   filter(grepl("[0-9]$", VOLUME)) |>
   filter(grepl("^\\(", NUMBER)) |>
-  mutate(NUMBER = str_sub(NUMBER, start = 2, end = str_length(NUMBER)-2)) |>
-  mutate(CATEGORY = "ARTICLE")
+  mutate(NUMBER = str_sub(NUMBER, start = 2, end = str_length(NUMBER) - 2)) |>
+  mutate(CATEGORY = "ARTICLE") |>
+#  mutate(AUTHOR = str_to_title(AUTHOR)) |>
+  mutate(AUTHOR = str_replace_all(
+    AUTHOR,
+    name_fix
+  )) 
 
-df2bib(bibtexgen, file = "autobib.bib")
+#df2bib(bibtexgen, file = "autobib.bib")
