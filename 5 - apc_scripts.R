@@ -2,8 +2,8 @@ require(tidyverse)
 require(slider)
 require(stringr)
 
-load("philo_bib_fix.RData")
-load("philo_cite_with_jp.RData")
+load("/Users/weath/Documents/citations-2024/philo_bib_fix.RData")
+load("/Users/weath/Documents/citations-2024/philo_cite_with_jp.RData")
 
 start_year <- 1956
 end_year <- 2021
