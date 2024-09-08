@@ -13,6 +13,38 @@ authadjust_short <- function(x){
   str_to_title(str_extract(x,".+(?=,)"))
 }
 
+# philo_bib_fix_1 <- philo_bib_fix_1 |>
+#   rowwise() |>
+#   mutate(auth = case_when(
+#     length(author) == 1 ~ authadjust(author[1]),
+#     length(author) == 2 ~ paste0(
+#       authadjust(author[1]), 
+#       " and ", 
+#       authadjust(author[2])
+#       ),
+#     length(author) == 3 ~ paste0(
+#       authadjust(author[1]), 
+#       ", ", 
+#       authadjust(author[2]), 
+#       ", and ",
+#       authadjust(author[3])
+#     ),
+#     length(author) == 4 ~ paste0(
+#       authadjust(author[1]), 
+#       ", ", 
+#       authadjust(author[2]), 
+#       ", ",
+#       authadjust(author[3]),
+#       ", and ",
+#       authadjust(author[4])
+#     ),
+#     TRUE ~ paste0(authadjust(author[1]), " et al")
+#   )) |>
+#   ungroup()
+
+
+
+
 name_fix <- c(
   'Bonjour' = 'BonJour',
   'Mcdowell' = 'McDowell',
@@ -32,7 +64,8 @@ name_fix <- c(
   'Vangelder' = 'van Gelder',
   'Derosset' = 'deRosset',
   'Mccloskey' = 'McCloskey',
-  'Derose' = 'DeRose'
+  'Derose' = 'DeRose',
+  'Mchugh' = 'McHugh'
 )
 
 philo_bib_fix_2 <- philo_bib_fix_1 |>
@@ -42,6 +75,10 @@ philo_bib_fix_2 <- philo_bib_fix_1 |>
   )) |>
   mutate(short_auth = str_replace_all(
     short_auth,
+    name_fix
+  )) |>
+  mutate(auth = str_replace_all(
+    auth,
     name_fix
   )) 
 

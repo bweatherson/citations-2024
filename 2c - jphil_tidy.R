@@ -20,7 +20,7 @@ jphil_total <- jphil_total %>%
   mutate(citedAuthor = str_to_title(citedAuthor))
 
 
-name_corrected <- read_csv("jphilauthors.csv")
+name_corrected <- read_csv("jphilauthors.csv", show_col_types = FALSE)
 
 jphil_total <- full_join(jphil_total, name_corrected, by = "citedAuthor") 
 
@@ -173,10 +173,7 @@ jphil_to_phil <- jphil_to_phil |>
   inner_join(target_articles, by = "join_code") |>
   rename(refs = id) |>
   rename(id = newid) |>
-  select(id, refs) |>
-  mutate(short_auth = case_when(
-    id == "10.2307_2024902" ~ "Lewis, Counterparts",
-    TRUE ~ short_auth))
+  select(id, refs)
 
 load("philo_cite_fix.RData")
 

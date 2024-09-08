@@ -1,0 +1,5 @@
+source('1e - fix_philo_bib.R')
+source('2c - jphil_tidy.R')
+# source('2d - add_gettier.R')
+source('2e - make_full_names.R')
+source('make-autobib.R')

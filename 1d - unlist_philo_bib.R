@@ -31,6 +31,45 @@ philo_bib_fix_1 <- philo_bib_fix_1 |>
                                 TRUE ~ paste0(authadjust_short(author[1]), " et al"))) |>
   ungroup()
 
+authadjust <- function(x){
+  paste0(str_extract(x, '\\b[^,]+$'), " ", str_to_title(str_extract(x,".+(?=,)")))
+}
+
+authadjust_short <- function(x){
+  str_to_title(str_extract(x,".+(?=,)"))
+}
+
+philo_bib_fix_1 <- philo_bib_fix_1 |>
+  rowwise() |>
+  mutate(auth = case_when(
+    length(author) == 1 ~ authadjust(author[1]),
+    length(author) == 2 ~ paste0(
+      authadjust(author[1]), 
+      " and ", 
+      authadjust(author[2])
+    ),
+    length(author) == 3 ~ paste0(
+      authadjust(author[1]), 
+      ", ", 
+      authadjust(author[2]), 
+      ", and ",
+      authadjust(author[3])
+    ),
+    length(author) == 4 ~ paste0(
+      authadjust(author[1]), 
+      ", ", 
+      authadjust(author[2]), 
+      ", ",
+      authadjust(author[3]),
+      ", and ",
+      authadjust(author[4])
+    ),
+    TRUE ~ paste0(authadjust(author[1]), " et al")
+  )) |>
+  ungroup()
+
+
+
 philo_bib_fix <- philo_bib_fix_1
 
 save(philo_bib_fix, file = "philo_bib_fix.RData")
