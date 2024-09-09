@@ -65,7 +65,8 @@ name_fix <- c(
   'Derosset' = 'deRosset',
   'Mccloskey' = 'McCloskey',
   'Derose' = 'DeRose',
-  'Mchugh' = 'McHugh'
+  'Mchugh' = 'McHugh',
+  'Ronnow‐Rasmussen' = 'Rønnow‐Rasmussen'
 )
 
 philo_bib_fix_2 <- philo_bib_fix_1 |>
@@ -125,6 +126,7 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
       '2 Concepts' = 'Two Concepts',
       '2 Kinds' = 'Two Kinds',
       '2 Types' = 'Two Types',
+      '1 Object' = 'One Object',
       'Mcdowell' = 'McDowell',
       '1st' = 'First',
       'G.e. Moore' = 'G.E. Moore',
