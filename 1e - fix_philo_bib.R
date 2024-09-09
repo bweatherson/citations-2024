@@ -81,7 +81,16 @@ philo_bib_fix_2 <- philo_bib_fix_1 |>
   mutate(auth = str_replace_all(
     auth,
     name_fix
-  )) 
+  )) |>
+  mutate(bibtex_author = str_replace_all(
+    bibtex_author,
+    name_fix
+  )) |>
+  mutate(display_author = str_replace_all(
+    display_author,
+    name_fix
+  ))
+  
 
 philo_bib_fix_3 <- philo_bib_fix_2 |>
   ungroup() |>
@@ -336,7 +345,7 @@ philo_bib_fix_5 <- philo_bib_fix_4 |>
                                     end_of_longcite))
 
 philo_bib_fix_6 <- philo_bib_fix_5 |>
-  select(id, journal, year, art_title, end_of_longcite, auth, firstauth, graph_auth, short_auth, graph_cite, full_cite, cite_without_year, shortcite) |>
+  select(id, display_author, year, art_title, journal, end_of_longcite, graph_auth, short_auth, graph_cite, full_cite, cite_without_year, shortcite, bibtex_author) |>
   mutate(journal = case_when(
     journal == "Philosophers Imprint" ~ "Philosophers' Imprint",
     TRUE ~ journal

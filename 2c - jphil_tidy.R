@@ -65,16 +65,16 @@ target_articles <- articles |>
     ") ",
     end_of_longcite
   )) |>
-  mutate(firstauth = short_auth) |>
-  mutate(auth = author) |>
+  mutate(display_author = author) |>
+  mutate(bibtex_author = author) |>
   select(-author) |>
   select(-vol, -iss, -fpage, -authall) |>
-  select(end_of_longcite, id, shortcite, year, journal, art_title, auth, firstauth, everything()) |>
+  select(id, display_author, year, art_title, journal, end_of_longcite, short_auth, shortcite, bibtex_author) |>
   mutate(graph_auth = case_when(
-    auth == "Hector-Neri Castaneda" ~ "H-N Castaneda",
-    auth == "Judith Jarvis Thomson" ~ "JJ Thomson",
+    display_author == "Hector-Neri Castaneda" ~ "H-N Castaneda",
+    display_author == "Judith Jarvis Thomson" ~ "JJ Thomson",
     TRUE ~ paste0(
-      str_sub(auth, 1, 1),
+      str_sub(display_author, 1, 1),
       " ",
       short_auth
     )

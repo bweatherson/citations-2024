@@ -7,9 +7,7 @@ load("philo_bib_fix.RData")
 
 
 bibtexgen <- philo_bib_fix |>
-  mutate(full_auth = str_replace_all(full_auth, ", ", " and ")) |>
-  mutate(full_auth = str_replace_all(full_auth, "and and", "and")) |>
-  select(BIBTEXKEY = id, YEAR = year, JOURNAL = journal, end_of_longcite, AUTHOR = full_auth, TITLE = art_title) |>
+  select(BIBTEXKEY = id, YEAR = year, JOURNAL = journal, end_of_longcite, AUTHOR = bibtex_author, TITLE = art_title) |>
   mutate(BIBTEXKEY = str_replace(BIBTEXKEY, ":", "")) |>
   filter(BIBTEXKEY != "WOS000221743500007") |>
   filter(grepl("[0-9]$", end_of_longcite)) |>
