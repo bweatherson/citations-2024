@@ -108,7 +108,7 @@ target_articles <- articles |>
   ))
 
 philo_bib_fix_7 <- philo_bib_fix_6 |>
-  bind_rows(target_articles)
+  bind_rows(target_articles) 
 
 philo_bib_fix <- philo_bib_fix_7
 save(philo_bib_fix, file = "philo_bib_fix.RData")
@@ -180,5 +180,12 @@ load("philo_cite_fix.RData")
 philo_cite_with_jp <- philo_cite_fix |>
   bind_rows(jphil_to_phil) |>
   distinct(id, refs)
+
+# Merge the parts of the Rawls 1980 article (may have to do this for other articles)
+philo_cite_with_jp <- philo_cite_with_jp |>
+  mutate(refs = str_replace_all(refs,"WOS:A1980KH88100001","WOS:A1980KH88100004")) |>
+  mutate(refs = str_replace_all(refs,"WOS:A1980KH88100002","WOS:A1980KH88100004")) |>
+  mutate(refs = str_replace_all(refs,"WOS:A1980KH88100003","WOS:A1980KH88100004"))
+
 
 save(philo_cite_with_jp, file = "philo_cite_with_jp.RData")

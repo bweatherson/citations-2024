@@ -200,7 +200,7 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
         'Aesthetic Attitude .5.' = 'Aesthetic Attitude',
         'A Causal Calculus .1.' = 'A Causal Calculus (I)',
         'A Causal Calculus (Ii)' = 'A Causal Calculus (II)',
-        'Why Did Einsteins Programme Supersede Lorentzs .1.' = 'Why Did Einsteins Programme Supersede Lorentz\'s (1)',
+        'Why Did Einsteins Programme Supersede Lorentzs .1.' = 'Why Did Einstein\'s Programme Supersede Lorentz\'s (I)',
         'Modern Moral-Philosophy' = 'Modern Moral Philosophy',
         'Thank Goodness Thats Over' = 'Thank Goodness That\'s Over',
         'Mctaggarts' = 'McTaggart\'s',
@@ -250,7 +250,8 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
         ': a' = ': A',
         ': the' = ': The',
         ': on' = ': On',
-        'Action: Problem' = 'Action: The Problem'
+        'Action: Problem' = 'Action: The Problem',
+        'Rational and Full Autonomy' = 'Kantian Constructivism in Moral Theory'
       )
     )
   )
@@ -322,6 +323,7 @@ philo_bib_fix_4 <- philo_bib_fix_3 |>
     TRUE ~ end_of_longcite)
   ) |>
   mutate(end_of_longcite = str_replace_all(end_of_longcite, " ", " ")) |>
+  mutate(id = str_replace_all(id,"WOS:A1980KH88100001","WOS:A1980KH88100004")) |>
   select(end_of_longcite, everything()) |>
   ungroup()
 
@@ -358,6 +360,9 @@ save(philo_bib_fix_6, file = "philo_bib_fix_without_jphil.RData")
 
 load("philo_cite.RData")
 philo_cite_fix <- philo_cite |>
+  mutate(refs = str_replace_all(refs,"WOS:A1980KH88100001","WOS:A1980KH88100004")) |>
+  mutate(refs = str_replace_all(refs,"WOS:A1980KH88100002","WOS:A1980KH88100004")) |>
+  mutate(refs = str_replace_all(refs,"WOS:A1980KH88100003","WOS:A1980KH88100004")) |>
   filter(id %in% philo_bib_fix$id) |>
   filter(refs %in% philo_bib_fix$id)
 save(philo_cite_fix, file = "philo_cite_fix.RData")
