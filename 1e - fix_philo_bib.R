@@ -296,7 +296,7 @@ philo_bib_fix_3 <- philo_bib_fix_2 |>
 
 philo_bib_fix_4 <- philo_bib_fix_3 |>
   ungroup() |>
-  mutate(end_of_longcite = str_sub(longcite, str_length(longcite)-35, str_length(longcite)-5)) |>
+  mutate(end_of_longcite = str_sub(longcite, str_length(longcite)-39, str_length(longcite)-5)) |>
   mutate(end_of_longcite = str_replace_all(end_of_longcite, "[a-z]", "")) |>
   mutate(end_of_longcite = str_replace_all(end_of_longcite, "[A-Z]", "")) |>
   mutate(end_of_longcite = str_replace_all(end_of_longcite, "[,.?]", "")) |>
